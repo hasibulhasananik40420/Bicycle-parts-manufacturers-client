@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './Login/Login';
 import Singup from './Login/Singup';
+import NotFoundPage from './NotFoundPage/NotFoundPage';
 import About from './Pages/About';
 import Blogs from './Pages/Blogs';
 import Contact from './Pages/Contact';
@@ -21,6 +22,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/singup" element={<Singup />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
        
        <Footer></Footer>
