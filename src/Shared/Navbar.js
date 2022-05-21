@@ -11,7 +11,7 @@ const Navbar = () => {
        signOut(auth)
     }
     return (
-        <div class="navbar bg-[#034975] ">
+        <div class="navbar bg-[#034975]">
         <div class="navbar-start ">
           <div class="dropdown">
             <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -22,7 +22,7 @@ const Navbar = () => {
                            <li><Link className='font-medium text-white' to='/blogs'>Blogs</Link></li>
                             <li><Link className='font-medium text-white' to='/contact'>Contact Us</Link></li>
                             <li><Link className='font-medium text-white' to='/about'>About</Link></li>
-                           {user? <button onClick={handleSingOut} className='font-medium text-white'>SingOut</button> :<li><Link className='font-medium text-white' to='/login'>Login</Link></li>}
+                           {user? <button onClick={handleSingOut} className='font-medium '>SingOut</button> :<li><Link className='font-medium text-white' to='/login'>Login</Link></li>}
             </ul>
           </div>
           <a class="btn btn-ghost normal-case text-xl">anik</a>
