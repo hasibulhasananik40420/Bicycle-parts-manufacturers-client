@@ -1,0 +1,59 @@
+[
+    {
+      "_id": 1,
+      "name": " Bicycle Disk brake",
+      "img": "https://static-01.daraz.com.bd/p/584f4063020c26797ee7dc4e473a4d66.jpg",
+      "des": "Bicycle Disk brake bicycle mechanical Disk brake F180/R160 for Rear break and (back side bracks)",
+      "minQuantity": 200,
+      "maxQuantity": 600,
+      "price": 1200 
+
+
+    },
+    {
+      "_id": 2,
+      "name": " Bicycle Left & Right Brake Handles",
+      "img": "https://static-01.daraz.com.bd/p/55fd662be5fc8d402cba142e68231ba7.jpg",
+      "des": "Shimano 3x8S Long Digits Shifter brake Levers 8 Speed bicycle accessories MTB bicycle bike gearshifter",
+      "minQuantity": 500,
+      "maxQuantity": 5000,
+      "price": 500 
+    },
+    {
+      "_id": 3,
+      "name": "Bicycle V Brake Front Set",
+      "img": "https://static-01.daraz.com.bd/p/8ba794a55f3a511fb32cc303a279201b.jpg",
+      "des": "Bicycle V Brake Front Set Metallic Black Bicycle Parts brake pads V brake Bicycle Accessories",
+      "minQuantity":40,
+      "maxQuantity": 500,
+      "price": 700 
+    },
+    {
+      "_id": 4,
+      "name": " Bicycle Repair Tool 4-Piece Set",
+      "img": "https://static-01.daraz.com.bd/p/5a7555c1d04f07335b35f08c8c0ad4f5.jpg",
+      "des": "Mountain Bike Bicycle Repair Tool Kit 4-Piece Set warrienty 4 years good quality tools",
+      "minQuantity": 300,
+      "maxQuantity": 1000,
+      "price": 1700 
+    },
+    {
+      "_id": 5,
+      "name": "Bicycle aluminum stand",
+      "img": "https://static-01.daraz.com.bd/p/75c02c3f9144fad2d80439c5f9854c74.jpg",
+      "des": "Bicycle Stand Side Kick Aluminium Malaysia Adjustable Alloy Stand Bicycle Accessories",
+      "minQuantity": 100,
+      "maxQuantity": 400,
+      "price": 1200 
+    },
+    {
+      "_id": 6,
+      "name": "High Quality Bicycle Mudguard",
+      "img": "https://static-01.daraz.com.bd/p/938b6c22453ad8a0082cfb256cf373fd.png",
+      "des": "High Quality Bicycle Mudguard Mountain Bike Fenders Mud Guard Bicycle ",
+      "minQuantity": 300,
+      "maxQuantity": 800,
+      "price": 1900 
+     
+    }
+  ]

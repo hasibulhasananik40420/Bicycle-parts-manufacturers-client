@@ -12,6 +12,12 @@ import Navbar from './Shared/Navbar';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import PrivateRoute from './Login/PrivateRoute';
+import MyOrders from './Pages/Dashboard/MyOrders';
+import AddReview from './Pages/Dashboard/AddReview';
+import MyProfil from './Pages/Dashboard/MyProfil';
+import AllUsers from './Pages/Dashboard/AllUsers';
 function App() {
   useEffect( ()=>{
     AOS.init();
@@ -27,6 +33,14 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/singup" element={<Singup />} />
+
+        <Route  path="/dashboard" element={<PrivateRoute><Dashboard></Dashboard></PrivateRoute>}>
+          {/* <Route index element={<AllUsers></AllUsers>}></Route> */}
+          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path='addreview' element={<AddReview></AddReview>}></Route>
+          <Route path='myprofil' element={<MyProfil></MyProfil>}></Route>
+        </Route>
+         
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
        

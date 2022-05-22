@@ -22,6 +22,9 @@ const Navbar = () => {
                            <li><Link className='font-medium text-white' to='/blogs'>Blogs</Link></li>
                             <li><Link className='font-medium text-white' to='/contact'>Contact Us</Link></li>
                             <li><Link className='font-medium text-white' to='/about'>About</Link></li>
+                             {
+                               user &&  <li><Link className='font-medium text-white' to='/dashboard'>Dashboard</Link></li>
+                             }
                            {user? <button onClick={handleSingOut} className='font-medium '>SingOut</button> :<li><Link className='font-medium text-white' to='/login'>Login</Link></li>}
             </ul>
           </div>
@@ -33,6 +36,9 @@ const Navbar = () => {
                             <li><Link className='font-medium text-white' to='/blogs'>Blogs</Link></li>
                             <li><Link className='font-medium text-white' to='/contact'>Contact Us</Link></li>
                             <li><Link className='font-medium text-white' to='/about'>About</Link></li>
+                            {
+                               user &&  <li><Link className='font-medium text-white' to='/dashboard'>Dashboard</Link></li>
+                             }
                             {user? <button onClick={handleSingOut} className='font-medium text-white'>SingOut</button> :<li><Link className='font-medium text-white' to='/login'>Login</Link></li>}
           </ul>
         </div>
