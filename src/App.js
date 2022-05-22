@@ -9,8 +9,13 @@ import Contact from './Pages/Contact';
 import Home from './Pages/Home';
 import Footer from './Shared/Footer';
 import Navbar from './Shared/Navbar';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 function App() {
+  useEffect( ()=>{
+    AOS.init();
+  },[])
   return (
     <div>
        <Navbar></Navbar>

@@ -33,7 +33,7 @@ const Contact = () => {
                 <input className='sm:w-1/4 md:w-full border  py-3 mb-6 rounded px-3' type="text" placeholder='Subject'/>
                 <textarea className='sm:w-1/4 md:w-full border  py-6 mb-2 rounded px-3' type="textarea" placeholder='Message'/>
                  </form>
-                 <button className='bg-yellow-600 px-8 py-3 rounded text-white font-bold mb-6'>Send Message</button>
+                 <button className='bg-yellow-600 px-8 py-3 rounded text-white font-bold mb-6 mt-6'>Send Message</button>
              </div>
           </div>
         </div>
