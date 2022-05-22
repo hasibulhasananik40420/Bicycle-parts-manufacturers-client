@@ -18,6 +18,7 @@ import MyOrders from './Pages/Dashboard/MyOrders';
 import AddReview from './Pages/Dashboard/AddReview';
 import MyProfil from './Pages/Dashboard/MyProfil';
 import AllUsers from './Pages/Dashboard/AllUsers';
+import SingleService from './Pages/SingleService';
 function App() {
   useEffect( ()=>{
     AOS.init();
@@ -33,6 +34,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/singup" element={<Singup />} />
+        <Route path="/singleservice/:id" element={<SingleService />} />
 
         <Route  path="/dashboard" element={<PrivateRoute><Dashboard></Dashboard></PrivateRoute>}>
           {/* <Route index element={<AllUsers></AllUsers>}></Route> */}
