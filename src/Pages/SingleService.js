@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-//onClick={()=>ServiceDetail(product?._id)}
 const SingleService = () => {
     const [services, setServices] = useState({})
     console.log(services);
@@ -10,7 +9,7 @@ const SingleService = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 setServices(data)
             })
     }, [])

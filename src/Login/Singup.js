@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../Firebase.init';
 import google from '../Assest/Images/google-logo.png'
 import Spinner from '../Shared/Spinner';
+import useToken from '../hooks/useToken';
 const Singup = () => {
     //google sing in
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
@@ -14,7 +15,7 @@ const Singup = () => {
     const location = useLocation()
     const navigate = useNavigate()
     let from = location.state?.from?.pathname || "/"
-
+    const [token] = useToken(user || googleUser)
 
 
     const onSubmit = async data => {
@@ -34,7 +35,7 @@ const Singup = () => {
         errorMessage = <p className='text-red-500 font-serif'> {error?.message || googleError?.message || updateError.message}</p>
     }
 
-    if (user || googleUser) {
+    if (token) {
         navigate(from, { replace: true });
     }
 

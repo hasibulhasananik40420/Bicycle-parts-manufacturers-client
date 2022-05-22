@@ -34,7 +34,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/singup" element={<Singup />} />
-        <Route path="/singleservice/:id" element={<SingleService />} />
+        <Route path="/singleservice/:id" element={<PrivateRoute><SingleService /></PrivateRoute>} />
 
         <Route  path="/dashboard" element={<PrivateRoute><Dashboard></Dashboard></PrivateRoute>}>
           {/* <Route index element={<AllUsers></AllUsers>}></Route> */}
