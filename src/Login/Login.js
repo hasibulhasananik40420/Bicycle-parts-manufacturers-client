@@ -85,12 +85,12 @@ const Login = () => {
                             </label>
                         </div>
 
-                        <input className="btn btn-accent btn-outline text-white w-full max-w-xs" type="submit" value="LOGIN" />
+                        <input className="btn  btn-outline  w-full max-w-xs" type="submit" value="LOGIN" />
                     </form>
                     {errorMessage}
-                    <span>New to here? <Link className='text-primary font-medium' to="/singup">Create a account</Link></span>
+                    <span>New to here? <Link className='text-primary font-medium' to="/singup">   Create an account</Link></span>
                     <div className="divider">OR</div>
-                    <button onClick={() => signInWithGoogle()} className="btn btn-outline btn-accent font-medium"> <img className='w-[30px] mr-3' src={googlelogo} alt="" /> Continue With Google</button> 
+                    <button onClick={() => signInWithGoogle()} className="btn btn-outline font-medium"> <img className='w-[30px] mr-3' src={googlelogo} alt="" /> Continue With Google</button> 
                 </div>
             </div>
         </div>

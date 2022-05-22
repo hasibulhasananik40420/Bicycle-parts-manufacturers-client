@@ -1,23 +1,54 @@
 import React from 'react';
-
+//style={{background:`url(${back})`}}
+import icon1 from '../Assest/Images/feedback.svg'
+import icon2 from '../Assest/Images/clients.svg'
+import icon3 from '../Assest/Images/projects.svg'
+import icon4 from '../Assest/Images/flag.svg'
 const BussinessSummary = () => {
     return (
-        <div>
-            <div className='text-center'>
-                <h1 className='text-3xl font-bold '>Millions Business Trust Us</h1>
-                <p className='text-xl font-semibold'>Try to Understand Users Expecttation</p>
+        <div className=''>
+            <div className='text-center mt-6 '>
+                <h1 className='text-3xl font-bold '>MILLOINS BUSSINESS TRUST US</h1>
+                <p className='text-xl font-semibold mt-4'>Try to Understand Users Expecttation</p>
             </div>
 
+              <div className='grid grid-cols-1 md:grid-cols-4 ml-36 mt-12 '>
+              <div>
+               <img className='w-[100px] mb-4' src={icon4} alt="" />
+                <div class="stat-value">60 +</div>
+               <h1 className='text-2xl font-bold'>Counties</h1>
+            </div> 
             <div>
-            <div class="stat">
-    <div class="stat-figure text-primary">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-    </div>
-    <div class="stat-title">Total Likes</div>
-    <div class="stat-value text-primary">25.6K</div>
-    <div class="stat-desc">21% more than last month</div>
-  </div>
+               <img className='w-[100px] mb-4' src={icon3} alt="" />
+                <div class="stat-value">1K +</div>
+               <h1 className='text-2xl font-bold'>Complete Projects</h1>
+            </div> 
+            <div>
+               <img className='w-[100px] mb-4 ' src={icon2} alt="" />
+               <div class="stat-value">2.6M</div>        
+                 <h1 className='text-2xl font-bold'>Happy Clients</h1>
+            </div> 
+            <div>
+               <img className='w-[100px] mb-4' src={icon1} alt="" />
+                <div class="stat-value">4,200 +</div>
+               <h1 className='text-2xl font-bold'>Feedbacks</h1>
             </div>
+              </div>
+
+               <div className='md:w-3/4 mx-auto flex justify-between  shadow-xl bg-accent p-12 mt-12 '>
+                   <div>
+                       <h1  data-aos-duration='1000'
+                         data-aos-delay='200' data-aos='fade-up' className='md:text-2xl font-semibold text-primary'>Have any Question about us or get a products requests</h1>
+                       <p data-aos-delay='400'
+                       data-aos-duration='900' data-aos='fade-right' className='md:text-xl font-medium'>Don't hesitate to contact us</p>
+                   </div>
+                   <div className='md:flex md:gap-4 md:mr-5'>
+                   <button data-aos='zoom-in'
+                       data-aos-delay='1300' class="btn  btn-primary mb-3 text-white font-medium">Request For Quote</button>
+                   <button data-aos='zoom-in'
+                       data-aos-delay='1000' class="btn  btn-primary text-white font-medium">Contact Us</button>
+                   </div>
+               </div>
         </div>
     );
 };

@@ -119,11 +119,11 @@ const Singup = () => {
 
                         {errorMessage}
 
-                        <input className="btn btn-accent btn-outline text-white w-full max-w-xs" type="submit" value="SINGUP" />
+                        <input className="btn  btn-outline  w-full max-w-xs" type="submit" value="SINGUP" />
                     </form>
                     <span>Already have an account? <Link className='text-primary font-medium' to="/login">Please Login</Link></span>
                     <div className="divider">OR</div>
-                    <button onClick={() => signInWithGoogle()} className="btn btn-outline btn-accent font-medium"><img className='w-[30px] mr-3' src={google} alt="" /> Continue With Google</button>
+                    <button onClick={() => signInWithGoogle()} className="btn btn-outline  font-medium"><img className='w-[30px] mr-3' src={google} alt="" /> Continue With Google</button>
                 </div>
             </div>
         </div>
