@@ -22,7 +22,7 @@ const Navbar = () => {
                            <li><Link className='font-medium text-white' to='/'>Home</Link></li>
                            <li><Link className='font-medium text-white' to='/blogs'>Blogs</Link></li>
                             <li><Link className='font-medium text-white' to='/contact'>Contact Us</Link></li>
-                            <li><Link className='font-medium text-white' to='/about'>About</Link></li>
+                            <li><Link className='font-medium text-white' to='/myprotfolio'>My Portfolio</Link></li>
                              {
                                user &&  <li><Link className='font-medium text-white' to='/dashboard'>Dashboard</Link></li>
                              }
@@ -37,7 +37,8 @@ const Navbar = () => {
                             <li><Link className='font-medium text-white' to='/'>Home</Link></li>
                             <li><Link className='font-medium text-white' to='/blogs'>Blogs</Link></li>
                             <li><Link className='font-medium text-white' to='/contact'>Contact Us</Link></li>
-                            <li><Link className='font-medium text-white' to='/about'>About</Link></li>
+                            <li><Link className='font-medium text-white' to='/myprotfolio'>My Portfolio</Link></li>
+
                             {
                                user &&  <li><Link className='font-medium text-white' to='/dashboard'>Dashboard</Link></li>
                              }

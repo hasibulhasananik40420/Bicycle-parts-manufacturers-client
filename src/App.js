@@ -25,6 +25,7 @@ import PrivateAdmin from './Login/PrivateAdmin';
 import ManageAllOrder from './Pages/Dashboard/ManageAllOrder';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
+import MyProtfolio from './Pages/MyProtfolio';
 
 function App() {
  
@@ -38,8 +39,8 @@ function App() {
        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/myprotfolio" element={<MyProtfolio />} />
         <Route path="/login" element={<Login />} />
         <Route path="/singup" element={<Singup />} />
         <Route path="/singleservice/:id" element={<PrivateRoute><SingleService /></PrivateRoute>} />

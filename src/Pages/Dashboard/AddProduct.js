@@ -1,21 +1,19 @@
-import { async } from '@firebase/util';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 
 const AddProduct = () => {
-    const { register, formState: { errors }, handleSubmit, reset } = useForm();
-    // const imageStoreKey = '3c1f06e572f598cefb6cae407a422a8b'
-    const imageStrogeKey = '3c1f06e572f598cefb6cae407a422a8b'
+    const { register, formState: { errors }, handleSubmit } = useForm();
+    const imageStoreKey = '3c1f06e572f598cefb6cae407a422a8b'
+    
     
      const onSubmit= async data =>{
-       console.log(data);
-       const img = data.img[0]
-       const formData = new FormData()
-       formData.append('img', img)
 
-    //    const url = `https://api.imgbb.com/1/upload?key=${imageStoreKey}`
-     const url =   `https://api.imgbb.com/1/upload?key=${imageStrogeKey}`
+    const img = data.img[0]
+    const formData = new FormData();
+    formData.append('image', img);
+
+       const url = `https://api.imgbb.com/1/upload?key=${imageStoreKey}`
         fetch(url , {
           method:'POST',
           body: formData
@@ -23,7 +21,7 @@ const AddProduct = () => {
         .then(res => res.json())
         .then(result =>{
             if(result.success){
-                const img = result.data.url
+                const img = result.data.display_url
                 const product ={
                     name: data.name ,
                     minQuantity: data.minQuantity,
@@ -32,7 +30,7 @@ const AddProduct = () => {
                     des: data.des ,
                     img: img 
                 }
-                fetch('http://localhost:5000/product', {
+                fetch('http://localhost:5000/products', {
                     method:'POST',
                     headers:{
                         'content-type': 'application/json',
