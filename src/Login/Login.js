@@ -6,6 +6,7 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import googlelogo from '../Assest/Images/google-logo.png'
 import Spinner from '../Shared/Spinner';
 import back from '../Assest/Images/Business crisis-bro.svg'
+import useToken from '../hooks/useToken';
 //style={{background:`url(${back})`}}
 const Login = () => {
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
@@ -13,14 +14,14 @@ const Login = () => {
     const location = useLocation()
     const navigate = useNavigate()
     let from = location.state?.from?.pathname || "/"
-
+    const [token] = useToken(user || googleUser)
     const { register, formState: { errors }, handleSubmit } = useForm();
     const onSubmit=(data)=>{
         console.log(data);
         signInWithEmailAndPassword(data.email , data.password )
     }
 
-     if(user || googleUser){
+     if(token){
         navigate(from, { replace: true });
      }
      if(loading || googleLoading){

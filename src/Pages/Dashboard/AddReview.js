@@ -52,7 +52,7 @@ const AddReview = () => {
                         <input disabled name='name' value={user?.email || ''} type="text" placeholder="Name" class="input input-bordered w-full max-w-xs mb-2" />
                         <input disabled name='email' value={user?.displayName || ''} type="text" placeholder="email" class="input input-bordered w-full max-w-xs mb-2" />
                         {/* <input type="text" placeholder="" class="input input-bordered w-full max-w-xs" /> */}
-                        <input name='number' type="number" placeholder="Ratting" class="input input-bordered w-full max-w-xs" />
+                        <input min="1" max="5" name='number' type="number" placeholder="Ratting" class="input input-bordered w-full max-w-xs" />
                         <button class="btn btn-accent mt-2">Add Review</button>
                     </form>
                 </div>

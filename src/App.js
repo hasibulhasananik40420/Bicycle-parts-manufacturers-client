@@ -19,14 +19,19 @@ import AddReview from './Pages/Dashboard/AddReview';
 import MyProfil from './Pages/Dashboard/MyProfil';
 import AllUsers from './Pages/Dashboard/AllUsers';
 import SingleService from './Pages/SingleService';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import PrivateAdmin from './Login/PrivateAdmin';
+
 function App() {
+ 
   useEffect( ()=>{
     AOS.init();
   },[])
   return (
     <div>
        <Navbar></Navbar>
-        
+       <ToastContainer />
        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blogs" element={<Blogs />} />
@@ -37,10 +42,10 @@ function App() {
         <Route path="/singleservice/:id" element={<PrivateRoute><SingleService /></PrivateRoute>} />
 
         <Route  path="/dashboard" element={<PrivateRoute><Dashboard></Dashboard></PrivateRoute>}>
-          {/* <Route index element={<AllUsers></AllUsers>}></Route> */}
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path='addreview' element={<AddReview></AddReview>}></Route>
           <Route path='myprofil' element={<MyProfil></MyProfil>}></Route>
+          <Route path='allusers' element={<PrivateAdmin><AllUsers></AllUsers></PrivateAdmin>}></Route>
         </Route>
          
         <Route path="*" element={<NotFoundPage />} />
