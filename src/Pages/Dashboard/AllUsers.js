@@ -1,17 +1,6 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import Spinner from '../../Shared/Spinner';
-import {
-    Table,
-    Thead,
-    Tbody,
-    Tfoot,
-    Tr,
-    Th,
-    Td,
-    TableCaption,
-    TableContainer,
-} from '@chakra-ui/react'
 import UserRow from './UserRow';
 const AllUsers = () => {
     const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user').then(res => res.json()))
@@ -21,24 +10,24 @@ const AllUsers = () => {
     }
 
     return (
-        <div>
-            <h1>all user : {users?.length}</h1>
-            <div class="overflow-x-auto">
-  <table class="table w-full">
+        <div className='mt-6'>
+            
+            <div className="overflow-x-auto">
+  <table className="table w-full">
     
     <thead>
       <tr>
         <th></th>
         <th>Name</th>
-        <th>Job</th>
-        <th>Job</th>
+        <th>Make </th>
+        <th>Remove</th>
       </tr>
     </thead>
     <tbody>
     
        
     {
-         users.map(user=> <UserRow key={user._id} user={user} refetch={refetch} ></UserRow>)
+         users.map((user , index)=> <UserRow key={user._id} user={user} refetch={refetch} index={index}></UserRow>)
       }
      
      

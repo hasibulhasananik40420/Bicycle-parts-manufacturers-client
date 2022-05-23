@@ -15,7 +15,7 @@ const SingleService = () => {
     }, [])
     return (
         <div>
-            <div className='flex justify-evenly mt-24'>
+            <div className='mt-6 flex justify-center'>
             <div class="card w-96 bg-base-100 shadow-xl">
                             <figure><img className=' w-2/4' src={services?.img} alt="Shoes" /></figure>
                             <div class="card-body">
@@ -32,23 +32,26 @@ const SingleService = () => {
                             </div>
                         </div>
 
-                <div>
+               
+
+            </div>
+
+            <section className='bg-accent p-16 mt-6 flex justify-center'>
                     <div class="card w-96 bg-accent shadow-xl">
                         <div class="card-body">
-                            <h2 class="text-center">Order Now</h2>
+                            <h2 class="text-center text-2xl font-semibold">Order Now</h2>
                             <input type="text" placeholder="Name" class="input w-full max-w-xs" />
                             <input type="email" placeholder="Email" class="input w-full max-w-xs" />
+                            <input type="number" placeholder="Available Quantity" class="input w-full max-w-xs" />
+                            <input type="number" placeholder="Minimum Quantity" class="input w-full max-w-xs" />
                             <input type="text" placeholder="Address" class="input w-full max-w-xs" />
                             <input type="text" placeholder="Phone" class="input w-full max-w-xs" />
                             <input type="text" placeholder="Order Id" class="input w-full max-w-xs" />
                             <div class="card-actions justify-center">
-                                <button class="btn btn-accent ">Buy Now</button>
-                            </div>
+                            <button class="btn btn-active btn-primary">Order Now</button>                            </div>
                         </div>
                     </div>
-                </div>
-
-            </div>
+                </section>
         </div>
     );
 };

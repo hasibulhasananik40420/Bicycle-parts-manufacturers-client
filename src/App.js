@@ -22,6 +22,9 @@ import SingleService from './Pages/SingleService';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import PrivateAdmin from './Login/PrivateAdmin';
+import ManageAllOrder from './Pages/Dashboard/ManageAllOrder';
+import AddProduct from './Pages/Dashboard/AddProduct';
+import ManageProducts from './Pages/Dashboard/ManageProducts';
 
 function App() {
  
@@ -46,6 +49,9 @@ function App() {
           <Route path='addreview' element={<AddReview></AddReview>}></Route>
           <Route path='myprofil' element={<MyProfil></MyProfil>}></Route>
           <Route path='allusers' element={<PrivateAdmin><AllUsers></AllUsers></PrivateAdmin>}></Route>
+          <Route path='manageallorders' element={<PrivateAdmin><ManageAllOrder></ManageAllOrder></PrivateAdmin>}></Route>
+          <Route path='addproduct' element={<PrivateAdmin><AddProduct></AddProduct></PrivateAdmin>}></Route>
+          <Route path='manageproducts' element={<PrivateAdmin><ManageProducts></ManageProducts></PrivateAdmin>}></Route>
         </Route>
          
         <Route path="*" element={<NotFoundPage />} />
