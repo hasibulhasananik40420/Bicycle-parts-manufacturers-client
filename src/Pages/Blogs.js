@@ -56,10 +56,10 @@ const Blogs = () => {
 
             <div tabindex="0" className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box md:w-3/4 mx-auto mb-3">
                 <div className="collapse-title text-xl font-medium">
-                    Focus me to see content
+                How does prototypical inheritance work?
                 </div>
                 <div className="collapse-content">
-                    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                JavaScript is the most common of the prototype-capable languages, and its capabilities are relatively unique. When used appropriately, prototypical inheritance in JavaScript is a powerful tool that can save hours of coding.
                 </div>
             </div>
         </div>

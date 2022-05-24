@@ -8,7 +8,7 @@ const OurTeams = () => {
 
             <div className='grid grid-cols-1 md:grid-cols-3'>
 
-                <div class="card w-80 style1 text-neutral-content mt-8">
+                <div class="card md:w-80 style1 text-neutral-content mt-8">
                     <div class="card-body items-center text-center">
                         <div class="avatar offline">
                             <div class="w-32 rounded-full">
@@ -70,7 +70,7 @@ const OurTeams = () => {
                     </div>
                 </div>
 
-                <div class="card w-80 style1 text-neutral-content mt-8">
+                <div class="card md:w-80 style1 text-neutral-content mt-8">
                     <div class="card-body items-center text-center">
                        
                         <div class="avatar offline">
@@ -136,7 +136,7 @@ const OurTeams = () => {
 
 
 
-                <div class="card w-80 style1 text-neutral-content mt-8">
+                <div class="card md:w-80 style1 text-neutral-content mt-8">
                     <div class="card-body items-center text-center">
                         <div class="avatar offline">
                             <div class="w-32 rounded-full">

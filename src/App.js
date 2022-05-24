@@ -26,6 +26,7 @@ import ManageAllOrder from './Pages/Dashboard/ManageAllOrder';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
 import MyProtfolio from './Pages/MyProtfolio';
+import EditProfil from './Pages/EditProfil';
 
 function App() {
  
@@ -41,6 +42,7 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/myprotfolio" element={<MyProtfolio />} />
+        {/* <Route path="/editprofil" element={<EditProfil />} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/singup" element={<Singup />} />
         <Route path="/singleservice/:id" element={<PrivateRoute><SingleService /></PrivateRoute>} />

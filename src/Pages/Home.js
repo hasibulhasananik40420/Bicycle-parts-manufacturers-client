@@ -24,7 +24,8 @@ const Home = () => {
             
           <div>
               <h1 className='text-3xl font-bold text-center mt-16'> CUSTOMAR REVIEWS </h1>
-          <div className='grid grid-cols-1 md:grid-cols-3 ml-12'>
+             <div className='text-center'> <progress class="progress progress-warning w-80"></progress></div>
+              <div className='grid grid-cols-1 md:grid-cols-3 ml-12'>
                 {
                     reviews?.map(review => <AllReviews key={review._id} review={review}></AllReviews>)
                 }
