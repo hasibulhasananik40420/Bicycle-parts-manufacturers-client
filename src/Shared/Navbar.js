@@ -21,23 +21,23 @@ const Navbar = () => {
             <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#034975] rounded-box w-52">
                            <li><Link className='font-medium text-white' to='/'>Home</Link></li>
                            <li><Link className='font-medium text-white' to='/blogs'>Blogs</Link></li>
-                            <li><Link className='font-medium text-white' to='/contact'>Contact Us</Link></li>
                             <li><Link className='font-medium text-white' to='/myprotfolio'>My Portfolio</Link></li>
+                            <li><Link className='font-medium text-white' to='/contact'>Contact Us</Link></li>
                              {
                                user &&  <li><Link className='font-medium text-white' to='/dashboard'>Dashboard</Link></li>
                              }
                            {user? <button onClick={handleSingOut} className='font-medium '>SingOut</button> :<li><Link className='font-medium text-white' to='/login'>Login</Link></li>}
             </ul>
           </div>
-          <a class="btn btn-ghost normal-case text-xl">anik</a>
+            <a class="btn btn-ghost normal-case text-xl">anik</a>
         </div>
 
         <div class="navbar-center hidden lg:flex ">
           <ul class="menu menu-horizontal p-0">
                             <li><Link className='font-medium text-white' to='/'>Home</Link></li>
                             <li><Link className='font-medium text-white' to='/blogs'>Blogs</Link></li>
-                            <li><Link className='font-medium text-white' to='/contact'>Contact Us</Link></li>
                             <li><Link className='font-medium text-white' to='/myprotfolio'>My Portfolio</Link></li>
+                            <li><Link className='font-medium text-white' to='/contact'>Contact Us</Link></li>
 
                             {
                                user &&  <li><Link className='font-medium text-white' to='/dashboard'>Dashboard</Link></li>

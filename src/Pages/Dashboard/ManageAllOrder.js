@@ -1,12 +1,49 @@
+import { useQuery } from "react-query";
+import Spinner from "../../Shared/Spinner";
 
 const ManageAllOrder = () => {
   
-   
+    const { data: allOrders, isLoading, refetch } = useQuery('allOrders', () => fetch('http://localhost:5000/orders').then(res => res.json()));
+    
+       if(isLoading){
+           return <Spinner></Spinner>
+       }
     return (
         <div>
-            manage all orders
+         
 
+         <div class="overflow-x-auto">
+  <table class="table w-full">
+   
+    <thead>
+      <tr>
+        <th></th>
+        <th>Product Name</th>
+        <th>Email</th>
+        <th>Price</th>
+        <th>Order Quantity</th>
+        <th>Payment</th>
+      </tr>
+    </thead>
+    <tbody>
+     
+          {
+             allOrders?.map((order , index)=> <tr key={order._id} order={order} index={index}>
 
+         <th>{index + 1}</th>
+         <td>{order.productname}</td>
+          <td>{order.email}</td>
+        <td>{order.price}</td>
+        <td>{order.orderQuanty}</td>
+         <td><button class="btn btn-xs">Paid</button>
+         <button class="btn btn-xs ml-2">cencle</button>
+         </td>
+             </tr>)
+          }
+
+    </tbody>
+  </table>
+</div>
 
             
         </div>

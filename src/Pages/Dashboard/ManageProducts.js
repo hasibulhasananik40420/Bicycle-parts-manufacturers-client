@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
-import { toast } from 'react-toastify';
 import Spinner from '../../Shared/Spinner';
 import DeleteModal from './DeleteModal';
 
@@ -50,7 +49,6 @@ const ManageProducts = () => {
                                     </div>
                                 </td>
                                 <td>{product?.name}</td>
-                                {/* <td><button onClick={()=>handleDelete(product?._id)} class="btn btn-sm btn-primary">Delete</button></td> */}
                                 <label onClick={()=>setDeleteProduct(product)} for="my-modal-6" class="btn btn-sm btn-primary">Delete</label>
                             </tr>)
                         }

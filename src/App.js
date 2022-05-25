@@ -40,9 +40,8 @@ function App() {
        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/myprotfolio" element={<MyProtfolio />} />
-        {/* <Route path="/editprofil" element={<EditProfil />} /> */}
+        <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/singup" element={<Singup />} />
         <Route path="/singleservice/:id" element={<PrivateRoute><SingleService /></PrivateRoute>} />
