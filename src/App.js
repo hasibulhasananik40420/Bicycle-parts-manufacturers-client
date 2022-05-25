@@ -27,6 +27,7 @@ import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
 import MyProtfolio from './Pages/MyProtfolio';
 import EditProfil from './Pages/EditProfil';
+import Payment from './Pages/Dashboard/Payment';
 
 function App() {
  
@@ -50,6 +51,7 @@ function App() {
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path='addreview' element={<AddReview></AddReview>}></Route>
           <Route path='myprofil' element={<MyProfil></MyProfil>}></Route>
+          <Route path='payment/:id' element={<Payment></Payment>}></Route>
           <Route path='allusers' element={<PrivateAdmin><AllUsers></AllUsers></PrivateAdmin>}></Route>
           <Route path='manageallorders' element={<PrivateAdmin><ManageAllOrder></ManageAllOrder></PrivateAdmin>}></Route>
           <Route path='addproduct' element={<PrivateAdmin><AddProduct></AddProduct></PrivateAdmin>}></Route>

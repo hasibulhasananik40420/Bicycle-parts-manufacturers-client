@@ -25,15 +25,15 @@ const Contact = () => {
              <div className='md:w-2/4 p-5'>
                  <h1 className='md:text-2xl text-white font-medium'>Leave us a Message</h1>
                  <form className='md:mt-6'>
-                  <div className='md:flex gap-4 mb-6'>
-                  <input type="text" placeholder="Your Name" class="input md:w-2/4 max-w-xs" /> 
+                  <div className='md:flex gap-4 mb-3'>
+                  <input type="text" placeholder="Your Name" class="input md:w-2/4 w-full max-w-xs mt-3" /> 
                    
-                   <input type="text" placeholder="Email Address" class="input md:w-2/4 max-w-xs" />
+                   <input type="text" placeholder="Email Address" class="input md:w-2/4 w-full max-w-xs mt-3" />
                 </div>                 
-                <input className='sm:w-1/4 md:w-full border  py-3 mb-6 rounded px-3' type="text" placeholder='Subject'/>
-                <textarea className='sm:w-1/4 md:w-full border  py-6 mb-2 rounded px-3' type="textarea" placeholder='Message'/>
+                <input className='sm:w-1/4 md:w-full border  py-3 mb-3 rounded px-3' type="text" placeholder='Subject'/>
+                <textarea className='w-full md:w-full border  py-6 mb-2 rounded px-3' type="textarea" placeholder='Message'/>
                  </form>
-                 <button className='bg-yellow-600 px-8 py-3 rounded text-white font-bold mb-6 mt-6'>Send Message</button>
+                 <button className='bg-yellow-600 px-8 py-3 rounded text-white font-bold mb-6 mt-3'>Send Message</button>
              </div>
           </div>
         </div>
