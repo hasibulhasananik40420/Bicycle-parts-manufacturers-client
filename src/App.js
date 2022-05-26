@@ -48,9 +48,10 @@ function App() {
         <Route path="/singleservice/:id" element={<PrivateRoute><SingleService /></PrivateRoute>} />
 
         <Route  path="/dashboard" element={<PrivateRoute><Dashboard></Dashboard></PrivateRoute>}>
-          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route index  element={<MyProfil></MyProfil>}></Route>
+          <Route path='myorders' element={<MyOrders></MyOrders>}></Route>
           <Route path='addreview' element={<AddReview></AddReview>}></Route>
-          <Route path='myprofil' element={<MyProfil></MyProfil>}></Route>
+          
           <Route path='payment/:id' element={<Payment></Payment>}></Route>
           <Route path='allusers' element={<PrivateAdmin><AllUsers></AllUsers></PrivateAdmin>}></Route>
           <Route path='manageallorders' element={<PrivateAdmin><ManageAllOrder></ManageAllOrder></PrivateAdmin>}></Route>

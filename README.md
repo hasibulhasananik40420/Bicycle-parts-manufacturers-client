@@ -1,6 +1,6 @@
-# Live site like : []
+# Live site like : [https://assignment-12-fe1d7.web.app/]
 
- # Website name : Izmo Stock 
+ # Website name : Izmo Stor 
 * Tailwind base Website
 * Cycle Warehouse Management website
 * Implement login singup form 

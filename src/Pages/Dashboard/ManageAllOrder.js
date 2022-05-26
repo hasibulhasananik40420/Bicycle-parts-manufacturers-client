@@ -22,7 +22,7 @@ const ManageAllOrder = () => {
         <th>Email</th>
         <th>Price</th>
         <th>Order Quantity</th>
-        <th>Payment</th>
+        {/* <th>Payment</th> */}
       </tr>
     </thead>
     <tbody>
@@ -35,9 +35,9 @@ const ManageAllOrder = () => {
           <td>{order.email}</td>
         <td>{order.price}</td>
         <td>{order.orderQuanty}</td>
-         <td><button className="btn btn-xs">Paid</button>
+         {/* <td><button className="btn btn-xs">Paid</button>
          <button className="btn btn-xs ml-2">cencle</button>
-         </td>
+         </td> */}
              </tr>)
           }
 
