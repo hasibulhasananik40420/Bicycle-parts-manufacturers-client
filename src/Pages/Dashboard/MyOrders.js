@@ -10,10 +10,10 @@ const MyOrders = () => {
   const [user] = useAuthState(auth)
   const email = user?.email
   const { data: myOrders, isLoading, refetch } = useQuery('myOrders', () => fetch(`http://localhost:5000/myorders?email=${email}`).then(res => res.json()));
-
-  if (isLoading) {
-    return <Spinner></Spinner>
-  }
+    
+   if(isLoading){
+     return <Spinner></Spinner>
+   }
 
 
   const handleOrderDelete = id =>{
@@ -58,14 +58,16 @@ const MyOrders = () => {
                 myOrders?.map((order, index) => <tr key={order._id} order={order} index={index}>
 
                   <th>{index + 1}</th>
-                  <td>{order.productname}</td>
-                  <td>{order.orderQuanty}</td>
-                  <td>{(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs'>PAY</button></Link>}
-                  {(order.price && order.paid) &&  <span className='text-red-500'>PAid</span>}
+                  <td>{order?.productname}</td>
+                  <td>{order?.orderQuanty}</td>
+                  <td>{(order?.price && !order?.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs'>PAY</button></Link>}
+                  {(order?.price && order?.paid) &&  <div>
+                    <p><span className='text-red-500'>Paid</span></p>
+                    <span className='text-red-500'>Transaction Id :{order.transactionId}</span>
+                    </div>}
                   </td>
                 
                   <td>
-                    {/* <button class="btn btn-xs"> payment </button> */}
                      
                      {/* cenclemodal */}
                     <label for="my-modal-6" class="btn btn-xs ml-4">cencle</label>
@@ -77,7 +79,7 @@ const MyOrders = () => {
                         <p class="py-4">If you cancle your order it's cencle parmanently.</p>
                         <div class="modal-action">
                         <label for="my-modal-6" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                          <label onClick={()=>handleOrderDelete(order._id)} for="my-modal-6" class="btn">Cencle Now</label>
+                          <label onClick={()=>handleOrderDelete(order?._id)} for="my-modal-6" class="btn">Cencle Now</label>
                         </div>
                       </div>
                     </div>
