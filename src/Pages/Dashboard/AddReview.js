@@ -43,16 +43,16 @@ const AddReview = () => {
     return (
         <div className='mt-24'>
 
-            <div class="card w-96 bg-primary text-primary-content md:ml-40">
-                <div class="card-body">
-                    <h2 class="card-title">Add Review</h2>
+            <div className="card w-96 bg-primary text-primary-content md:ml-40">
+                <div className="card-body">
+                    <h2 className="card-title">Add Review</h2>
                     <form onSubmit={reviewItem}>
                         <textarea name='des' className='sm:w-1/4 md:w-full border  py-6 mb-2 rounded px-3' type="textarea" placeholder='Review' />
                         <br />
-                        <input disabled name='name' value={user?.email || ''} type="text" placeholder="Name" class="input input-bordered w-full max-w-xs mb-2" />
-                        <input disabled name='email' value={user?.displayName || ''} type="text" placeholder="email" class="input input-bordered w-full max-w-xs mb-2" />
-                        <input min="1" max="5" name='number' type="number" placeholder="Ratting" class="input input-bordered w-full max-w-xs" />
-                        <button class="btn btn-accent mt-2">Add Review</button>
+                        <input disabled name='name' value={user?.email || ''} type="text" placeholder="Name" className="input input-bordered w-full max-w-xs mb-2" />
+                        <input disabled name='email' value={user?.displayName || ''} type="text" placeholder="email" className="input input-bordered w-full max-w-xs mb-2" />
+                        <input min="1" max="5" name='number' type="number" placeholder="Ratting" className="input input-bordered w-full max-w-xs" />
+                        <button className="btn btn-accent mt-2">Add Review</button>
                     </form>
                 </div>
             </div>

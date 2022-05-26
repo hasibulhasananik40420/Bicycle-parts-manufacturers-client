@@ -12,8 +12,8 @@ const ManageAllOrder = () => {
         <div>
          
 
-         <div class="overflow-x-auto">
-  <table class="table w-full">
+         <div className="overflow-x-auto">
+  <table className="table w-full">
    
     <thead>
       <tr>
@@ -35,8 +35,8 @@ const ManageAllOrder = () => {
           <td>{order.email}</td>
         <td>{order.price}</td>
         <td>{order.orderQuanty}</td>
-         <td><button class="btn btn-xs">Paid</button>
-         <button class="btn btn-xs ml-2">cencle</button>
+         <td><button className="btn btn-xs">Paid</button>
+         <button className="btn btn-xs ml-2">cencle</button>
          </td>
              </tr>)
           }

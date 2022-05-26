@@ -56,9 +56,9 @@ const AddProduct = (e) => {
     return (
         <div>
             <div className='mt-6 md:ml-16'>
-                <div class="card w-96 bg-primary text-neutral-content">
-                    <div class="card-body items-center text-center">
-                        <h2 class="card-title"> Add Product </h2>
+                <div className="card w-96 bg-primary text-neutral-content">
+                    <div className="card-body items-center text-center">
+                        <h2 className="card-title"> Add Product </h2>
 
                         <form onSubmit={handleSubmit(onSubmit)}>
 

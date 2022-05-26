@@ -35,16 +35,16 @@ const Login = () => {
 
     return (
         <div  className='flex justify-center items-center h-screen'>
-            <div class="card w-96  bg-base-100 text-primary-content shadow-2xl">
-                <div class="card-body">
+            <div className="card w-96  bg-base-100 text-primary-content shadow-2xl">
+                <div className="card-body">
               
                    
-                    <h2 class="text-xl font-bold text-center">LOGIN</h2>
+                    <h2 className="text-xl font-bold text-center">LOGIN</h2>
                     <form  onSubmit={handleSubmit(onSubmit)}>
 
-                        <div class="form-control w-full max-w-xs">
-                            <label class="label">
-                                <span class="label-text">Email</span>
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">Email</span>
 
                             </label>
                             <input  {...register("email", {
@@ -56,8 +56,8 @@ const Login = () => {
                                     value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
                                     message: 'Provide a valid Email'
                                 }
-                            })} type="email" placeholder="Enter Email" class="input input-bordered  w-full max-w-xs" />
-                            <label class="label">
+                            })} type="email" placeholder="Enter Email" className="input input-bordered  w-full max-w-xs" />
+                            <label className="label">
                                 {errors.email?.type === 'required' && <span className="label-text-alt text-red-500 font-medium">{errors.email.message}</span>}
                                 {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-500 font-medium">{errors.email.message}</span>}
 

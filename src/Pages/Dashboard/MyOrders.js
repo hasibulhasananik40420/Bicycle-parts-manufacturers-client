@@ -41,8 +41,8 @@ const MyOrders = () => {
     <div>
       <h1 className='text-2xl font-bold text-center mt-3 mb-3'>Your Orders : {myOrders?.length}</h1>
       <div>
-        <div class="overflow-x-auto">
-          <table class="table w-full">
+        <div className="overflow-x-auto">
+          <table className="table w-full">
             <thead>
               <tr>
                 <th></th>
@@ -60,6 +60,7 @@ const MyOrders = () => {
                   <th>{index + 1}</th>
                   <td>{order?.productname}</td>
                   <td>{order?.orderQuanty}</td>
+                  
                   <td>{(order?.price && !order?.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs'>PAY</button></Link>}
                   {(order?.price && order?.paid) &&  <div>
                     <p><span className='text-red-500'>Paid</span></p>
@@ -70,16 +71,16 @@ const MyOrders = () => {
                   <td>
                      
                      {/* cenclemodal */}
-                    <button className={`${!order.paid? '' : 'hidden'}`} > <label  for="my-modal-6" class="btn btn-xs ml-4">cencle</label> </button>
+                    <button className={`${!order.paid? '' : 'hidden'}`} > <label  for="my-modal-6" className="btn btn-xs ml-4">cencle</label> </button>
 
-                    <input type="checkbox" id="my-modal-6" class="modal-toggle" />
-                    <div class="modal modal-bottom sm:modal-middle">
-                      <div class="modal-box">
-                        <h3 class="font-bold text-2xl text-rose-500">Are you sure to cencle your order? </h3>
-                        <p class="py-4">If you cancle your order it's cencle parmanently.</p>
-                        <div class="modal-action">
-                        <label for="my-modal-6" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                          <label onClick={()=>handleOrderDelete(order?._id)} for="my-modal-6" class="btn">Cencle Now</label>
+                    <input type="checkbox" id="my-modal-6" className="modal-toggle" />
+                    <div className="modal modal-bottom sm:modal-middle">
+                      <div className="modal-box">
+                        <h3 className="font-bold text-2xl text-rose-500">Are you sure to cencle your order? </h3>
+                        <p className="py-4">If you cancle your order it's cencle parmanently.</p>
+                        <div className="modal-action">
+                        <label for="my-modal-6" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                          <label onClick={()=>handleOrderDelete(order?._id)} for="my-modal-6" className="btn">Cencle Now</label>
                         </div>
                       </div>
                     </div>

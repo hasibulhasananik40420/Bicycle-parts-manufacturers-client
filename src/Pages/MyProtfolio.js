@@ -21,32 +21,32 @@ const MyProtfolio = () => {
                     <p className='text-xl font-semibold mb-8'>hasibulhasan40420@gmail.com</p>
 
 
-                    <div class="stats shadow-xl ">
+                    <div className="stats shadow-xl ">
 
-                        <div class="stat place-items-center">
-                            <div class="stat-title">Projects</div>
-                            <div class="stat-value">15 +</div>
-                            <div class="stat-desc">From January 1st to May 1st</div>
+                        <div className="stat place-items-center">
+                            <div className="stat-title">Projects</div>
+                            <div className="stat-value">15 +</div>
+                            <div className="stat-desc">From January 1st to May 1st</div>
                         </div>
 
-                        <div class="stat place-items-center">
-                            <div class="stat-title">Happy Client</div>
-                            <div class="stat-value text-secondary">12 + </div>
-                            <div class="stat-desc text-secondary">↗︎ 40 (2%)</div>
+                        <div className="stat place-items-center">
+                            <div className="stat-title">Happy Client</div>
+                            <div className="stat-value text-secondary">12 + </div>
+                            <div className="stat-desc text-secondary">↗︎ 40 (2%)</div>
                         </div>
 
-                        <div class="stat place-items-center">
-                            <div class="stat-title">Problem Solving</div>
-                            <div class="stat-value">60 + </div>
-                            <div class="stat-desc">↘︎ 90 (14%)</div>
+                        <div className="stat place-items-center">
+                            <div className="stat-title">Problem Solving</div>
+                            <div className="stat-value">60 + </div>
+                            <div className="stat-desc">↘︎ 90 (14%)</div>
                         </div>
 
                     </div>
                 </div>
 
                 <div className=''>
-                    <div class="avatar">
-                        <div class="w-40 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <div className="avatar">
+                        <div className="w-40 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                             <img src={profil} alt='' />
                         </div>
                     </div>
@@ -60,13 +60,13 @@ const MyProtfolio = () => {
                <br />
                <a className='text-xl font-semibold text-yellow-600' href="https://assignment-10-48fb0.web.app/?fbclid=IwAR2Lz75zQ0QYm6LtT-HIaThZrq9bUh8zuwhLi3z38Z50YvESblvj_1B4jcw"> Second website click here</a>
                <br />
-               <a className='text-xl font-semibold text-yellow-600' <button class="btn btn-wide"> </button>
+               <a className='text-xl font-semibold text-yellow-600' <button className="btn btn-wide"> </button>
  > Third website click here</a>
             </div> */}
 
             <div className='mt-16'>
                 <h1 className='text-3xl font-blod text-center '> My Skills </h1>
-                <div className='text-center'> <progress class="progress w-56"></progress></div>
+                <div className='text-center'> <progress className="progress w-56"></progress></div>
 
                 <div className='md:flex md:justify-between md:w-3/4 mx-auto'>
                     <div>
@@ -75,17 +75,17 @@ const MyProtfolio = () => {
 
                     <div className='mt-24'>
                         <div><label className='font-bold' htmlFor="">HTML</label> <br />
-                            <progress class="progress progress-primary  w-80" value="98" max="100"></progress>
+                            <progress className="progress progress-primary  w-80" value="98" max="100"></progress>
                         </div>
                         <div><label className='font-bold' htmlFor="">CSS</label> <br />
-                            <progress class="progress progress-success  w-80" value="90" max="100"></progress>
+                            <progress className="progress progress-success  w-80" value="90" max="100"></progress>
                         </div>
                         <div><label className='font-bold' htmlFor="">JAVASCRIPT</label> <br />
-                            <progress class="progress progress-yellow w-80" value="85" max="100"></progress>
+                            <progress className="progress progress-yellow w-80" value="85" max="100"></progress>
                         </div>
                         <div>
                             <label className='font-bold' htmlFor="">REACT JS</label> <br />
-                            <progress class="progress progress-error w-80" value="80" max="100"></progress>
+                            <progress className="progress progress-error w-80" value="80" max="100"></progress>
                         </div>
                     </div>
                 </div>
@@ -95,51 +95,51 @@ const MyProtfolio = () => {
 
             <div>
                 <h1 className='text-3xl font-bold text-center'> My Projects</h1>
-                <div className='text-center'> <progress class="progress progress-primary w-56"></progress></div>
+                <div className='text-center'> <progress className="progress progress-primary w-56"></progress></div>
 
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6 m-8'>
 
-                    <div class="card md:w-96 bg-base-100 shadow-xl">
+                    <div className="card md:w-96 bg-base-100 shadow-xl">
                         <figure><img src={ss1} alt="Shoes" /></figure>
-                        <div class="card-body">
-                            <h2 class="card-title">
+                        <div className="card-body">
+                            <h2 className="card-title">
                                Barbar Shop
                             </h2>
                             <p>Barbar Shop is a service web Website.</p>
-                            <div class="card-actions justify-end">
-                                <div class="badge badge-outline">Manufacturer</div>
-                                <div class="badge badge-outline"><a  href="https://assignment-10-48fb0.web.app/?fbclid=IwAR2Lz75zQ0QYm6LtT-HIaThZrq9bUh8zuwhLi3z38Z50YvESblvj_1B4jcw">Visit here</a></div>
+                            <div className="card-actions justify-end">
+                                <div className="badge badge-outline">Manufacturer</div>
+                                <div className="badge badge-outline"><a  href="https://assignment-10-48fb0.web.app/?fbclid=IwAR2Lz75zQ0QYm6LtT-HIaThZrq9bUh8zuwhLi3z38Z50YvESblvj_1B4jcw">Visit here</a></div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card md:w-96 bg-base-100 shadow-xl">
+                    <div className="card md:w-96 bg-base-100 shadow-xl">
                         <figure><img src={ss2} alt="Shoes" /></figure>
-                        <div class="card-body">
-                            <h2 class="card-title">
+                        <div className="card-body">
+                            <h2 className="card-title">
                                 Mobil showroom
                                
                             </h2>
                             <p>Mobile Shop is buying and selling website</p>
-                            <div class="card-actions justify-end">
-                                <div class="badge badge-outline">Manufacturer</div>
-                                <div class="badge badge-outline"><a href="https://agitated-heisenberg-275ee3.netlify.app/?fbclid=IwAR2VRh4glnFX5zGCLAyAXfgCNi8BYGeSWsR27ZxuWcvW5Jq6NWM4WTD8dI0">Visite here</a></div>
+                            <div className="card-actions justify-end">
+                                <div className="badge badge-outline">Manufacturer</div>
+                                <div className="badge badge-outline"><a href="https://agitated-heisenberg-275ee3.netlify.app/?fbclid=IwAR2VRh4glnFX5zGCLAyAXfgCNi8BYGeSWsR27ZxuWcvW5Jq6NWM4WTD8dI0">Visite here</a></div>
                             </div>
                         </div>
                     </div>
 
 
-                    <div class="card md:w-96 bg-base-100 shadow-xl">
+                    <div className="card md:w-96 bg-base-100 shadow-xl">
                         <figure><img src={ss3} alt="Shoes" /></figure>
-                        <div class="card-body">
-                            <h2 class="card-title">
+                        <div className="card-body">
+                            <h2 className="card-title">
                               Izmo stock
                                
                             </h2>
                             <p>Izmo Stock is a werehouse Website.</p>
-                            <div class="card-actions justify-end">
-                                <div class="badge badge-outline">Manufacturer</div>
-                                <div class="badge badge-outline"><a  href="https://assginment-11.web.app/?fbclid=IwAR1zogsFIGFrt8xhITj1iwgOpuFEsRt6Hks59emxek-t6wtrXt7xie_YNFM">Visit here</a></div>
+                            <div className="card-actions justify-end">
+                                <div className="badge badge-outline">Manufacturer</div>
+                                <div className="badge badge-outline"><a  href="https://assginment-11.web.app/?fbclid=IwAR1zogsFIGFrt8xhITj1iwgOpuFEsRt6Hks59emxek-t6wtrXt7xie_YNFM">Visit here</a></div>
                             </div>
                         </div>
                     </div>

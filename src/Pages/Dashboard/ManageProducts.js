@@ -23,8 +23,8 @@ const ManageProducts = () => {
         <div>
             <h1 className='text-2xl text-center mt-4 mb-3'>Total Products : {products?.length}</h1>
 
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
 
                     <thead>
                         <tr>
@@ -42,14 +42,14 @@ const ManageProducts = () => {
 
                                 <th>{index + 1}</th>
                                 <td>
-                                    <div class="avatar">
-                                        <div class="w-12 rounded-xl">
+                                    <div className="avatar">
+                                        <div className="w-12 rounded-xl">
                                             <img src={product?.img} alt='' />
                                         </div>
                                     </div>
                                 </td>
                                 <td>{product?.name}</td>
-                                <label onClick={()=>setDeleteProduct(product)} for="my-modal-6" class="btn btn-sm btn-primary">Delete</label>
+                                <label onClick={()=>setDeleteProduct(product)} for="my-modal-6" className="btn btn-sm btn-primary">Delete</label>
                             </tr>)
                         }
 

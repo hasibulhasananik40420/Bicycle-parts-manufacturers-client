@@ -43,9 +43,9 @@ const Singup = () => {
 
     return (
         <div className='flex justify-center items-center h-screen'>
-            <div class="card w-96  bg-base-100 text-primary-content shadow-2xl">
-                <div class="card-body">
-                    <h2 class="text-xl font-bold text-center">SINGUP</h2>
+            <div className="card w-96  bg-base-100 text-primary-content shadow-2xl">
+                <div className="card-body">
+                    <h2 className="text-xl font-bold text-center">SINGUP</h2>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
 

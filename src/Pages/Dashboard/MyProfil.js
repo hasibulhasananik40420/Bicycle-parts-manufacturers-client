@@ -64,8 +64,8 @@ const MyProfil = () => {
 
       {/* edit prodil modal */}
       <div className='ml-24 mt-16'>
-        <div class="avatar">
-          <div class="w-40 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+        <div className="avatar">
+          <div className="w-40 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
             <img src='https://api.lorem.space/image/face?hash=28212' alt='' />
           </div>
         </div>
@@ -81,11 +81,11 @@ const MyProfil = () => {
         </div>
         <div className='mt-4 ml-6'>
 
-          <label for="my-modal-6" class="btn modal-button">Edit Profil</label>
+          <label for="my-modal-6" className="btn modal-button">Edit Profil</label>
 
-          <input type="checkbox" id="my-modal-6" class="modal-toggle" />
-          <div class="modal modal-bottom sm:modal-middle">
-            <div class="modal-box"> 
+          <input type="checkbox" id="my-modal-6" className="modal-toggle" />
+          <div className="modal modal-bottom sm:modal-middle">
+            <div className="modal-box"> 
               <h1 className='md:text-2xl font-medium'>Edit Your Information</h1>
               <form onSubmit={handleInfo} className='mt-3'>
                 <input disabled className='sm:w-1/4 md:w-full border  py-3 mb-3 rounded px-3' type="text" name='name' value={user?.displayName || ''} placeholder='Name' />
@@ -97,8 +97,8 @@ const MyProfil = () => {
                 <button className='bg-yellow-600 px-8 py-3 rounded text-white font-bold mb-2 mt-2'>Send Now</button>
               </form>
 
-              <div class="modal-action">
-                <label for="my-modal-6" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+              <div className="modal-action">
+                <label for="my-modal-6" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
               </div>
             </div>
           </div>
