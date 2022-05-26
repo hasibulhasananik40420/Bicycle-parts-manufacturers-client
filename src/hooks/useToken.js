@@ -8,7 +8,7 @@ import { useEffect, useState } from "react"
     const email = user?.user?.email
     const currentUser= {email:email}
       if(email){
-          fetch(`http://localhost:5000/user/${email}`, {
+          fetch(`https://pure-island-40196.herokuapp.com/user/${email}`, {
               method: 'PUT',
               headers :{
                   'content-type': 'application/json'

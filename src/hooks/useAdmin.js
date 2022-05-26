@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
      useEffect(()=>{
          const email = user?.email 
          if(email){
-             fetch(`http://localhost:5000/admin/${email}` , {
+             fetch(`https://pure-island-40196.herokuapp.com/admin/${email}` , {
                  method: 'GET',
                  headers:{
                     'content-type':'application/json',

@@ -6,7 +6,7 @@ import DeleteModal from './DeleteModal';
 const ManageProducts = () => {
    
     const [deleteProduct, setDeleteProduct] = useState(null)
-    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('http://localhost:5000/products', {
+    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('https://pure-island-40196.herokuapp.com/products', {
         headers: {
             'content-type': 'application/json'
             // authorization: `Bearer ${localStorage.getItem('accessToken')}`

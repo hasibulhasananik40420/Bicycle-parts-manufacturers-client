@@ -9,7 +9,7 @@ const MyOrders = () => {
   
   const [user] = useAuthState(auth)
   const email = user?.email
-  const { data: myOrders, isLoading, refetch } = useQuery('myOrders', () => fetch(`http://localhost:5000/myorders?email=${email}`).then(res => res.json()));
+  const { data: myOrders, isLoading, refetch } = useQuery('myOrders', () => fetch(`https://pure-island-40196.herokuapp.com/myorders?email=${email}`).then(res => res.json()));
     
    if(isLoading){
      return <Spinner></Spinner>
@@ -18,7 +18,7 @@ const MyOrders = () => {
 
   const handleOrderDelete = id =>{
     console.log(id);
-    fetch(`http://localhost:5000/myorders/${id}`,{
+    fetch(`https://pure-island-40196.herokuapp.com/myorders/${id}`,{
      method: 'DELETE' ,
      headers:{
          'content-type': 'application/json',
@@ -70,7 +70,7 @@ const MyOrders = () => {
                   <td>
                      
                      {/* cenclemodal */}
-                    <label for="my-modal-6" class="btn btn-xs ml-4">cencle</label>
+                    <button className={`${!order.paid? '' : 'hidden'}`} > <label  for="my-modal-6" class="btn btn-xs ml-4">cencle</label> </button>
 
                     <input type="checkbox" id="my-modal-6" class="modal-toggle" />
                     <div class="modal modal-bottom sm:modal-middle">

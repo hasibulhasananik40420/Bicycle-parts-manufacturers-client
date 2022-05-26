@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 import auth from '../../Firebase.init';
 import useAdmin from '../../hooks/useAdmin';
 
@@ -20,13 +20,13 @@ const Dashboard = () => {
     <label for="my-drawer-2" class="drawer-overlay"></label> 
     <ul class="menu p-4 overflow-y-auto w-80  text-base-content mr-5">
     
-      <li><Link to='/dashboard'>My Orders</Link></li>
-      <li><Link to='/dashboard/addreview'>Add A Review</Link></li>
-      <li><Link to='/dashboard/myprofil'>My Profil</Link></li>
-      <li>{admin && <Link to='/dashboard/allusers'>Make Admin </Link>}</li>
-      <li>{admin && <Link to='/dashboard/manageallorders'>Manage All Orders </Link>}</li>
-      <li>{admin && <Link to='/dashboard/addproduct'>Add Product </Link>}</li>
-      <li>{admin && <Link to='/dashboard/manageproducts'>Manage Products </Link>}</li>
+      <li>{!admin &&  <NavLink to='/dashboard'>My Orders</NavLink>}</li>
+      <li>{!admin && <NavLink to='/dashboard/addreview'>Add A Review</NavLink>}</li>
+      <li><NavLink to='/dashboard/myprofil'>My Profil</NavLink></li>
+      <li>{admin && <NavLink to='/dashboard/allusers'>Make Admin </NavLink>}</li>
+      <li>{admin && <NavLink to='/dashboard/manageallorders'>Manage All Orders </NavLink>}</li>
+      <li>{admin && <NavLink to='/dashboard/addproduct'>Add Product </NavLink>}</li>
+      <li>{admin && <NavLink to='/dashboard/manageproducts'>Manage Products </NavLink>}</li>
     </ul>
   
   </div>

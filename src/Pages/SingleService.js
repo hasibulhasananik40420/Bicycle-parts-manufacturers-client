@@ -11,7 +11,7 @@ const SingleService = () => {
      let availableQnty = Number(maxQuantity)
     const { id } = useParams()
     useEffect(() => {
-        const url = `http://localhost:5000/products/${id}`
+        const url = `https://pure-island-40196.herokuapp.com/products/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -56,7 +56,7 @@ const SingleService = () => {
 
         }
 
-        const url = `http://localhost:5000/orders`
+        const url = `https://pure-island-40196.herokuapp.com/orders`
         fetch(url , {
             method: 'POST',
             headers:{
@@ -67,6 +67,7 @@ const SingleService = () => {
         .then(res => res.json())
         .then(data=>{
             console.log(data);
+             toast.success('Your order is booked')
             e.target.reset()
         })
 
@@ -111,8 +112,8 @@ const SingleService = () => {
                             <input disabled name='orderQuanty' value={orderQuanty} type="number" placeholder="Order Quantity" class="input w-full max-w-xs mb-2" />
                             <input  disabled name='price' value={price || ''} price='price' type="number" placeholder="price" class="input w-full max-w-xs mb-2" />
                             <input required name='address' type="text" placeholder="Address" class="input w-full max-w-xs mb-2" />
-                            <input required name='phone' type="number" placeholder="Phone" class="input w-full max-w-xs mb-2" />
-                            <input name='orderId' type="text" placeholder="Order Id" class="input w-full max-w-xs mb-2" />
+                            <input required name='phone' type="text" placeholder="Phone" class="input w-full max-w-xs mb-2" />
+                            <input name='orderId' type="text" placeholder="Order Id/type any number that you remembered" class="input w-full max-w-xs mb-2" />
                             <div class="card-actions justify-center mt-2">
                             <button class="btn btn-active btn-primary">Order Now</button>   
                            </div>

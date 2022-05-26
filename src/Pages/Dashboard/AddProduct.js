@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 
-const AddProduct = () => {
+const AddProduct = (e) => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const imageStoreKey = '3c1f06e572f598cefb6cae407a422a8b'
     
@@ -30,7 +30,7 @@ const AddProduct = () => {
                     des: data.des ,
                     img: img 
                 }
-                fetch('http://localhost:5000/products', {
+                fetch('https://pure-island-40196.herokuapp.com/products', {
                     method:'POST',
                     headers:{
                         'content-type': 'application/json',
