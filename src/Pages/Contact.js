@@ -1,41 +1,133 @@
 import React from 'react';
-
+import googleimage from '../Assest/Images/Rectangle 38.png'
+import { RiMapPin5Line } from 'react-icons/ri';
 const Contact = () => {
     return (
-        <div className='mt-24'>
-             {/* <h1 className='text-4xl  font-bold mt-6 mb-6'>Contact Us</h1> */}
-          <div className='md:flex md:justify-between bg-black border-2 p-16'>
-          <div className='md:w-2/4 text-white font-medium p-6'>
-                <p className='text-3xl mb-4'>Our Address</p>
-                <p >715 Fake Ave, Apt. 34, New York, NY 10021 USA  </p>
-                   <p> Email: stroyka@example.com</p>
-                    <p>Phone Number: +1 754 000-00-00</p>
-               
-                <p className='pt-3'>
-                    <p className='md:text-2xl mb-3'>Opening Hours</p>
-                   <p> Monday to Friday: 8am-8pm</p>
-                   <p> Saturday: 8am-6pm</p>
-                    <p>Sunday: 10am-4pm</p>
-                </p>
-                <p className='md:text-2xl pt-2'>Comment</p>
-                <p className='pt-1'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit suscipit mi, non tempor nulla finibus eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
+
+        <div className='mt-12 mx-8'>
+            <h1 className=' text-success font-lato'>How can help you ?</h1>
+
+            <div className='lg:flex lg:justify-evenly w-full mt-10 gap-8'>
+
+                <div>
+                    <h1 className='text-3xl font-lato'>Let us know how</h1>
+                    <h1 className='text-3xl font-lato mt-3'> We can help you</h1>
+                    <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+
+                    <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+
+                <div>
+                    <h1 className='text-xl font-lato'>01. Visit Feedback</h1>
+                    <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                    <h1 className='text-success mt-4'>03. Billing Inquiries</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+                <div>
+                    <h1 className='text-xl font-lato'>02. Employer Services</h1>
+                    <p className='mt-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                    <h1 className='text-success mt-4'>04.General Inquiries</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
             </div>
-             <div className='md:w-2/4 p-5'>
-                 <h1 className='md:text-2xl text-white font-medium'>Leave us a Message</h1>
-                 <form className='md:mt-6'>
-                  <div className='md:flex gap-4 mb-3'>
-                  <input type="text" placeholder="Your Name" class="input md:w-2/4 w-full max-w-xs mt-3" /> 
-                   
-                   <input type="text" placeholder="Email Address" class="input md:w-2/4 w-full max-w-xs mt-3" />
-                </div>                 
-                <input className='sm:w-1/4 md:w-full border  py-3 mb-3 rounded px-3' type="text" placeholder='Subject'/>
-                <textarea className='w-full md:w-full border  py-6 mb-2 rounded px-3' type="textarea" placeholder='Message'/>
-                 </form>
-                 <button className='bg-yellow-600 px-8 py-3 rounded text-white font-bold mb-6 mt-3'>Send Message</button>
-             </div>
-          </div>
+            {/* google map */}
+
+            <div className='mt-12'>
+                <img src={googleimage} alt="" />
+            </div>
+
+            {/* office studio shop */}
+
+            <div className='mt-14 lg:flex w-full gap-24'>
+                <div className='mb-4'>
+                    <h1 className='text-3xl font-lato font-medium text-success'>Office</h1>
+                    <p className='font-lato mt-4'>205 North Michigan Avenue, Suite 810
+                    </p>
+                    <p className='font-lato mt-1'>Chicago, 60601, USA
+                    </p>
+                    <p className='font-lato mt-1'>Phone: (123) 456-7890
+                    </p>
+                    <p className='font-lato mt-1'>Email: contact@Evara.com
+                    </p>
+                    <button className='bg-success mt-4 py-2 px-4 rounded-md text-white font-medium hover:bg-warning hover:border border-success '><span className='flex gap-2 items-center'><RiMapPin5Line></RiMapPin5Line>  View map</span></button>
+                </div>
+                <div className='mb-4'>
+                    <h1 className='text-3xl font-lato font-medium text-success'>Studio</h1>
+                    <p className='font-lato mt-4'>205 North Michigan Avenue, Suite 810
+                    </p>
+                    <p className='font-lato mt-1'>Chicago, 60601, USA
+                    </p>
+                    <p className='font-lato mt-1'>Phone: (123) 456-7890
+                    </p>
+                    <p className='font-lato mt-1'>Email: contact@Evara.com
+                    </p>
+                    <button className='bg-success mt-4 py-2 px-4 rounded-md text-white font-medium hover:bg-warning hover:border border-success '><span className='flex gap-2 items-center'><RiMapPin5Line></RiMapPin5Line>  View map</span></button>
+                </div>
+
+                <div>
+                    <h1 className='text-3xl font-lato font-medium text-success'>Shop</h1>
+                    <p className='font-lato mt-4'>205 North Michigan Avenue, Suite 810
+                    </p>
+                    <p className='font-lato mt-1'>Chicago, 60601, USA
+                    </p>
+                    <p className='font-lato mt-1'>Phone: (123) 456-7890
+                    </p>
+                    <p className='font-lato mt-1'>Email: contact@Evara.com
+                    </p>
+                    <button className='bg-success mt-4 py-2 px-4 rounded-md text-white font-medium hover:bg-warning hover:border border-success '><span className='flex gap-2 items-center'><RiMapPin5Line></RiMapPin5Line>  View map</span></button>
+                </div>
+            </div>
+
+
+
+            {/* contact us */}
+
+            <div className='mt-16'>
+                <h1 className='text-2xl font-semibold text-success'>Contact form
+                </h1>
+                <h1 className='lg:text-6xl text-4xl font-bold text-[#253D4E] mt-2'>Drop Us a Line</h1>
+                <p className='mt-3 text-[#7E7E7E] text-xl'>Your email address will not be published. Required fields are marked *
+
+                </p>
+
+
+                <div className='lg:flex w-full gap-16'>
+                    <form >
+                        <div className='p-2 lg:w-[700px] w-full mt-8'>
+
+
+                            <div className="md:flex gap-4 mt-4">
+                                <input name='courseDuration' className='w-full h-11 pl-3 rounded-md in-bord border border-[#E5E5E5] mb-3' type="text" placeholder='Your Name' required />
+                                <input name='students' className='w-full border border-[#E5E5E5] h-11 pl-3 rounded-md in-bord mb-3' type="text" placeholder='Your Email' required />
+
+                            </div>
+                            <div className="md:flex gap-4 mt-4">
+                                <input name='courseDuration' className='w-full h-11 pl-3 rounded-md in-bord border border-[#E5E5E5] mb-3' type="text" placeholder='Your Phone' required />
+                                <input name='students' className='w-full border border-[#E5E5E5] h-11 pl-3 rounded-md in-bord mb-3' type="text" placeholder='Subject' required />
+
+                            </div>
+
+
+                            <textarea name='description' className='w-full h-32 pl-3 border border-[#E5E5E5] rounded-md in-bord mb-3' type="text" placeholder='Message' />
+
+                            <button type='submit' className='p-3 px-4 bg-[#253D4E] hover:bg-success rounded-md  text-white font-semibold'>Sent Message</button>
+
+                        </div>
+                    </form>
+
+                    <div>
+                        <img className='w-[350px] h-[350px]' src="http://wp.alithemes.com/html/nest/demo/assets/imgs/page/contact-2.png" alt="" />
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
         </div>
     );
 };

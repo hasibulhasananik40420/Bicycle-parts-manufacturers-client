@@ -5,12 +5,13 @@ import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../Firebase.init';
 import Spinner from '../../Shared/Spinner';
+import Swal from 'sweetalert2'
 
 const MyProfil = () => {
- 
+
 
   const [user] = useAuthState(auth)
-  const email= user?.email
+  const email = user?.email
   const handleInfo = e => {
     e.preventDefault()
     const info = {
@@ -21,7 +22,7 @@ const MyProfil = () => {
       city: e.target.city.value,
       phone: e.target.phone.value
     }
-    const url = `https://pure-island-40196.herokuapp.com/myprofil/${email}`
+    const url = `http://localhost:5000/myprofil/${email}`
     fetch(url, {
       method: 'PUT',
       headers: {
@@ -32,19 +33,26 @@ const MyProfil = () => {
       .then(res => res.json())
       .then(data => {
         toast.success('Profil information saved')
+        Swal.fire({
+          position: 'top-center',
+          icon: 'success',
+          title: 'Profil information saved',
+          showConfirmButton: false,
+          timer: 1500
+        })
         e.target.reset()
-       
+
       })
   }
 
-  //  const { data: profil, isLoading, refetch } = useQuery('profil', () => fetch(`https://pure-island-40196.herokuapp.com/myprofil/${user?.email}`).then(res => res.json()));
-   const { data: profil, isLoading, refetch } = useQuery('profil', () => fetch(`https://pure-island-40196.herokuapp.com/myprofil/${user?.email}`).then(res => res.json()));
- 
-       
-       if(isLoading){
-         return <Spinner></Spinner>
-       }
-   
+  //  const { data: profil, isLoading, refetch } = useQuery('profil', () => fetch(`http://localhost:5000/myprofil/${user?.email}`).then(res => res.json()));
+  const { data: profil, isLoading, refetch } = useQuery('profil', () => fetch(`http://localhost:5000/myprofil/${user?.email}`).then(res => res.json()));
+
+
+  if (isLoading) {
+    return <Spinner></Spinner>
+  }
+
 
   return (
     <div className='md:flex '>
@@ -54,7 +62,7 @@ const MyProfil = () => {
 
           <input disabled className='sm:w-1/4 md:w-full border  py-3 mb-3 rounded px-3' type="text" name='name' value={user?.displayName || ''} placeholder='Name' />
           <input disabled className='sm:w-1/4 md:w-full border  py-3 mb-3 rounded px-3' type="email" name='email' value={user?.email || ''} placeholder='Email' />
-          <input className='sm:w-1/4 md:w-full border  py-3 mb-3 rounded px-3' type="text" name='education' defaultValue={profil[0].education}  placeholder='Education' />
+          <input className='sm:w-1/4 md:w-full border  py-3 mb-3 rounded px-3' type="text" name='education' defaultValue={profil[0].education} placeholder='Education' />
           <input className='sm:w-1/4 md:w-full border  py-3 mb-3 rounded px-3' type="text" name='profil' defaultValue={profil[0].profil} placeholder='Linkdin Profil' />
           <input className='sm:w-1/4 md:w-full border  py-3 mb-3 rounded px-3' type="text" name='city' defaultValue={profil[0].city} placeholder='City/district)' />
           <input className='sm:w-1/4 md:w-full border  py-3 mb-3 rounded px-3' type="text" name='phone' defaultValue={profil[0].phone} placeholder='Phone ' />
@@ -71,11 +79,11 @@ const MyProfil = () => {
         </div>
 
         <div>
-          
+
           <h1>{user?.displayName}</h1>
           <p>{user?.email}</p>
 
-         
+
 
 
         </div>
@@ -85,7 +93,7 @@ const MyProfil = () => {
 
           <input type="checkbox" id="my-modal-6" className="modal-toggle" />
           <div className="modal modal-bottom sm:modal-middle">
-            <div className="modal-box"> 
+            <div className="modal-box">
               <h1 className='md:text-2xl font-medium'>Edit Your Information</h1>
               <form onSubmit={handleInfo} className='mt-3'>
                 <input disabled className='sm:w-1/4 md:w-full border  py-3 mb-3 rounded px-3' type="text" name='name' value={user?.displayName || ''} placeholder='Name' />

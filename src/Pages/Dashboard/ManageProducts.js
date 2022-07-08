@@ -4,18 +4,18 @@ import Spinner from '../../Shared/Spinner';
 import DeleteModal from './DeleteModal';
 
 const ManageProducts = () => {
-   
+
     const [deleteProduct, setDeleteProduct] = useState(null)
-    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('https://pure-island-40196.herokuapp.com/products', {
+    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('http://localhost:5000/products', {
         headers: {
             'content-type': 'application/json'
             // authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }
     }).then(res => res.json()));
 
-      if(isLoading){
-          return <Spinner></Spinner>
-      }
+    if (isLoading) {
+        return <Spinner></Spinner>
+    }
 
 
 
@@ -49,7 +49,7 @@ const ManageProducts = () => {
                                     </div>
                                 </td>
                                 <td>{product?.name}</td>
-                                <label onClick={()=>setDeleteProduct(product)} for="my-modal-6" className="btn btn-sm btn-primary">Delete</label>
+                                <label onClick={() => setDeleteProduct(product)} for="my-modal-6" className="btn btn-sm btn-primary">Delete</label>
                             </tr>)
                         }
 
@@ -58,9 +58,9 @@ const ManageProducts = () => {
                 </table>
             </div>
 
-                {
-                    deleteProduct &&  <DeleteModal deleteProduct={deleteProduct} refetch={refetch} setDeleteProduct={setDeleteProduct}></DeleteModal>
-                }      
+            {
+                deleteProduct && <DeleteModal deleteProduct={deleteProduct} refetch={refetch} setDeleteProduct={setDeleteProduct}></DeleteModal>
+            }
         </div>
     );
 };

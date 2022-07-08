@@ -1,25 +1,25 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const DeleteModal = ({deleteProduct , refetch , setDeleteProduct}) => {
+const DeleteModal = ({ deleteProduct, refetch, setDeleteProduct }) => {
 
-    const handleDelete= id=>{
-        fetch(`https://pure-island-40196.herokuapp.com/products/${id}`, {
-            method: 'DELETE' ,
-            headers:{
-               'content-type': 'application/json',
-               authorization: `Bearer ${localStorage.getItem('accessToken')}`
+    const handleDelete = id => {
+        fetch(`http://localhost:5000/products/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': 'application/json',
+                // authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
         })
-        .then(res => res.json())
-        .then(data=> {
-            console.log(data);
-            if(data.deletedCount){
-                toast.success(`Product deleted successfully`)
-                refetch()
-                setDeleteProduct()
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.deletedCount) {
+                    toast.success(`Product deleted successfully`)
+                    refetch()
+                    setDeleteProduct()
+                }
+            })
     }
     return (
         <div>
@@ -31,7 +31,7 @@ const DeleteModal = ({deleteProduct , refetch , setDeleteProduct}) => {
                     <h3 className="font-bold text-lg text-red-600">Are you sure to delete this product? </h3>
                     <p className="py-4 text-blue-600 font-semibold">Make sure if you deleted this item .It's will deleted permanentlly .</p>
                     <div className="modal-action">
-                    <td><button onClick={()=>handleDelete(deleteProduct?._id)} className="btn btn-sm btn-primary">Delete</button></td>
+                        <td><button onClick={() => handleDelete(deleteProduct?._id)} className="btn btn-sm btn-primary">Delete</button></td>
                         <label for="my-modal-6" className="btn btn-sm btn-primary">Cencle</label>
                     </div>
                 </div>

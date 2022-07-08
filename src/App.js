@@ -28,17 +28,19 @@ import ManageProducts from './Pages/Dashboard/ManageProducts';
 import MyProtfolio from './Pages/MyProtfolio';
 import EditProfil from './Pages/EditProfil';
 import Payment from './Pages/Dashboard/Payment';
+import AllProducts from './Pages/AllProducts/AllProducts';
 
 function App() {
- 
-  useEffect( ()=>{
+
+  useEffect(() => {
     AOS.init();
-  },[])
+  }, [])
+
   return (
     <div>
-       <Navbar></Navbar>
-       <ToastContainer />
-       <Routes>
+      <Navbar></Navbar>
+      <ToastContainer />
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/myprotfolio" element={<MyProtfolio />} />
@@ -46,23 +48,24 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/singup" element={<Singup />} />
         <Route path="/singleservice/:id" element={<PrivateRoute><SingleService /></PrivateRoute>} />
+        <Route path="/allproducts" element={<AllProducts />} />
 
-        <Route  path="/dashboard" element={<PrivateRoute><Dashboard></Dashboard></PrivateRoute>}>
-          <Route index  element={<MyProfil></MyProfil>}></Route>
+        <Route path="/dashboard" element={<PrivateRoute><Dashboard></Dashboard></PrivateRoute>}>
+          <Route index element={<MyProfil></MyProfil>}></Route>
           <Route path='myorders' element={<MyOrders></MyOrders>}></Route>
           <Route path='addreview' element={<AddReview></AddReview>}></Route>
-          
+
           <Route path='payment/:id' element={<Payment></Payment>}></Route>
           <Route path='allusers' element={<PrivateAdmin><AllUsers></AllUsers></PrivateAdmin>}></Route>
           <Route path='manageallorders' element={<PrivateAdmin><ManageAllOrder></ManageAllOrder></PrivateAdmin>}></Route>
           <Route path='addproduct' element={<PrivateAdmin><AddProduct></AddProduct></PrivateAdmin>}></Route>
           <Route path='manageproducts' element={<PrivateAdmin><ManageProducts></ManageProducts></PrivateAdmin>}></Route>
         </Route>
-         
+
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-       
-       <Footer></Footer>
+
+      <Footer></Footer>
     </div>
   );
 }

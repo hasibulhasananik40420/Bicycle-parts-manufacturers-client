@@ -1,20 +1,20 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
 
-const CheckoutForm = ({order}) => {
-      const stripe = useStripe();
-      const elements = useElements();
-      const [cardError, setCardError] = useState('');
-      const [success, setSuccess] = useState('');
-      const [processing, setProcessing] = useState(false);
-      const [transactionId, setTransactionId] = useState('');
-      const [clientSecret, setClientSecret] = useState('');
-  
-      const { _id, price, email } = order;
+const CheckoutForm = ({ order }) => {
+    const stripe = useStripe();
+    const elements = useElements();
+    const [cardError, setCardError] = useState('');
+    const [success, setSuccess] = useState('');
+    const [processing, setProcessing] = useState(false);
+    const [transactionId, setTransactionId] = useState('');
+    const [clientSecret, setClientSecret] = useState('');
+
+    const { _id, price, email } = order;
 
 
-      useEffect(() => {
-        fetch('https://pure-island-40196.herokuapp.com/create-payment-intent', {
+    useEffect(() => {
+        fetch('http://localhost:5000/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -35,76 +35,76 @@ const CheckoutForm = ({order}) => {
 
 
     const handleSubmit = async (event) => {
-      event.preventDefault();
+        event.preventDefault();
 
-      if (!stripe || !elements) {
-          return;
-      }
+        if (!stripe || !elements) {
+            return;
+        }
 
-      const card = elements.getElement(CardElement);
+        const card = elements.getElement(CardElement);
 
-      if (card === null) {
-          return;
-      }
+        if (card === null) {
+            return;
+        }
 
-      const { error, paymentMethod } = await stripe.createPaymentMethod({
-          type: 'card',
-          card
-      });
+        const { error, paymentMethod } = await stripe.createPaymentMethod({
+            type: 'card',
+            card
+        });
 
-      setCardError(error?.message || '')
-      setSuccess('');
-      setProcessing(true);
-      // confirm card payment
-      const { paymentIntent, error: intentError } = await stripe.confirmCardPayment(
-          clientSecret,
-          {
-              payment_method: {
-                  card: card,
-                  billing_details: {
-                      // name: patientName,
-                      email: email
-                  },
-              },
-          },
-      );
+        setCardError(error?.message || '')
+        setSuccess('');
+        setProcessing(true);
+        // confirm card payment
+        const { paymentIntent, error: intentError } = await stripe.confirmCardPayment(
+            clientSecret,
+            {
+                payment_method: {
+                    card: card,
+                    billing_details: {
+                        // name: patientName,
+                        email: email
+                    },
+                },
+            },
+        );
 
-      if (intentError) {
-          setCardError(intentError?.message);
-          setProcessing(false);
-      }
-      else {
-          setCardError('');
-          setTransactionId(paymentIntent.id);
-          console.log(paymentIntent);
-          setSuccess('Congrats! Your payment is completed.')
-          
-          //store payment on database
-          const payment = {
-              order: _id,
-              transactionId: paymentIntent.id
-          }
-          fetch(`https://pure-island-40196.herokuapp.com/orders/${_id}`, {
-              method: 'PATCH',
-              headers: {
-                  'content-type': 'application/json',
-                  'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-              },
-              body: JSON.stringify(payment)
-          }).then(res=>res.json())
-          .then(data => {
-              setProcessing(false);
-              console.log(data);
-          })
+        if (intentError) {
+            setCardError(intentError?.message);
+            setProcessing(false);
+        }
+        else {
+            setCardError('');
+            setTransactionId(paymentIntent.id);
+            console.log(paymentIntent);
+            setSuccess('Congrats! Your payment is completed.')
 
-      }
-  }
+            //store payment on database
+            const payment = {
+                order: _id,
+                transactionId: paymentIntent.id
+            }
+            fetch(`http://localhost:5000/orders/${_id}`, {
+                method: 'PATCH',
+                headers: {
+                    'content-type': 'application/json',
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                },
+                body: JSON.stringify(payment)
+            }).then(res => res.json())
+                .then(data => {
+                    setProcessing(false);
+                    console.log(data);
+                })
+
+        }
+    }
 
 
     return (
         <>
 
-<form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <CardElement
                     options={{
                         style: {

@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-//
+
 const Products = () => {
-    const navigate = useNavigate() 
-    const ServiceDetail=id=>{
-       navigate(`/singleservice/${id}`)
+    const navigate = useNavigate()
+
+    const ServiceDetail = id => {
+        navigate(`/singleservice/${id}`)
     }
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('https://pure-island-40196.herokuapp.com/products')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -18,26 +19,44 @@ const Products = () => {
     return (
         <div className='mt-8'>
             <h1 className='text-3xl font-bold text-center'>Tools</h1>
-             <div className='text-center'><progress class="progress w-56"></progress></div>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 md:m-8'>
-                {
-                    products?.slice(0,6).map(product => <div key='product._id'>
+            <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/wave.png" alt="" className='mx-auto' />
+            <Link to='/allproducts' className='text-xl font-medium cursor-pointer flex justify-end text-red-600'>See more</Link>
 
-                        <div data-aos="zoom-in" className="card w-96 bg-base-100 shadow-xl">
-                            <figure><img className=' w-2/4' src={product.img} alt="Shoes" /></figure>
-                            <div className="card-body">
-                                <h2 className="card-title">{product.name}</h2>
-                                <p>{product.des}</p>
-                                <p className='font-medium'>Minimum Quantity: {product.minQuantity}</p>
-                                <p className='font-medium'>Available Quantity: {product.maxQuantity}</p>
-                                <p className='font-medium text-xl'>Price : {product.price}</p>
-                                <div className="card-actions justify-start">
-                                    <button  onClick={()=>ServiceDetail(product?._id)} className="btn btn-black btn-outline">Buy Now  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                    </svg></button>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:m-8'>
+                {
+                    products?.slice(0, 6).map(product => <div key='product._id'>
+
+                        <div
+                            className=' shadow p-2 bg-[#F6F7FD]  w-full min-h-max max-w-xs cursor-pointer relative'>
+                            <div className="border w-[302px]  h-[240px] ">
+                                <img className='w-full h-full' src={product.img} alt="" />
+                            </div>
+
+                            <div className='h-[120px] p-2 w-full '>
+                                <h2 className='text-xl font-bold min-h-[52px] max-h-[44px] overflow-clip'>Minimum Orider:{product.minQuantity}</h2>
+                                <h5 className='font-bold text-[#515FCE]'>Available: {product.maxQuantity}</h5>
+
+                                <div className='absolute bottom-0 w-11/12'>
+                                    <hr className='mt-2 border border-[#B3EAFF]' />
+                                    <div className=' w-full flex justify-between items-center h-[40px] '>
+                                        <div className='flex'>
+
+                                            <button onClick={() => ServiceDetail(product?._id)} className='px-3 py-1 bg-orange-600 rounded text-white fonr-medium hover:bg-yellow-600'>Details</button>
+
+                                        </div>
+                                        <div>
+                                            <h2 className='text-xl font-bold text-[#515FCE]'> ৳ {product.price}</h2>
+                                        </div>
+
+                                    </div>
+
                                 </div>
+
                             </div>
                         </div>
+
+
+
 
                     </div>)
                 }
