@@ -10,7 +10,7 @@ const AllProducts = () => {
         navigate(`/singleservice/${id}`)
     }
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://pure-island-40196.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);

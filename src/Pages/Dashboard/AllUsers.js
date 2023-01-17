@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import Spinner from '../../Shared/Spinner';
 import UserRow from './UserRow';
 const AllUsers = () => {
-  const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user').then(res => res.json()))
+  const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://pure-island-40196.herokuapp.com/user').then(res => res.json()))
 
   if (isLoading) {
     return <Spinner></Spinner>

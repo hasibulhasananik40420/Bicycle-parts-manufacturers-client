@@ -18,7 +18,7 @@ const AddReview = () => {
 
 
         }
-        const url = `http://localhost:5000/review`
+        const url = `https://pure-island-40196.herokuapp.com/review`
         fetch(url, {
             method: 'POST',
             headers: {
@@ -41,7 +41,7 @@ const AddReview = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://pure-island-40196.herokuapp.com/review')
             .then(res => res.json())
             .then(data => {
                 console.log(data);

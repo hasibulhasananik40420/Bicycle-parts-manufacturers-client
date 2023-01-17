@@ -14,7 +14,7 @@ const SingleService = () => {
     let availableQnty = Number(maxQuantity)
     const { id } = useParams()
     useEffect(() => {
-        const url = `http://localhost:5000/products/${id}`
+        const url = `https://pure-island-40196.herokuapp.com/products/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -59,7 +59,7 @@ const SingleService = () => {
 
         }
 
-        const url = `http://localhost:5000/orders`
+        const url = `https://pure-island-40196.herokuapp.com/orders`
         fetch(url, {
             method: 'POST',
             headers: {
