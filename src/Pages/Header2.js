@@ -4,7 +4,7 @@ const Header2 = () => {
     return (
         <div>
             <section
-                className="bg-[url('https://learnwithsumit.com/_next/static/media/pattern-dark.20747baf.svg')]  min-h-[100vh] lg:flex items-center mt-16 bg-opacity-0	"
+                className="bg-[url('https://learnwithsumit.com/_next/static/media/pattern-dark.20747baf.svg')]  min-h-[100vh] lg:flex items-center  bg-opacity-0	"
             >
                 <div className=' lg:p-10 container mx-auto lg:flex gap-6'>
                     {/* text part */}
