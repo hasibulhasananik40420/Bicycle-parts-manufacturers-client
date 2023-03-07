@@ -8,13 +8,13 @@ import Swal from 'sweetalert2'
 const SingleService = () => {
     const [user] = useAuthState(auth)
     const [services, setServices] = useState({})
-    console.log(services)
+    // console.log(services)
     const { price, name, minQuantity, maxQuantity, des, img } = services
     const [orderQuanty, setOrderQnty] = useState(minQuantity)
     let availableQnty = Number(maxQuantity)
     const { id } = useParams()
     useEffect(() => {
-        const url = `https://pure-island-40196.herokuapp.com/products/${id}`
+        const url = `http://localhost:5000/products/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -59,7 +59,7 @@ const SingleService = () => {
 
         }
 
-        const url = `https://pure-island-40196.herokuapp.com/orders`
+        const url = `http://localhost:5000/orders`
         fetch(url, {
             method: 'POST',
             headers: {

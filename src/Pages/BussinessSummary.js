@@ -7,12 +7,12 @@ import icon4 from '../Assest/Images/flag.svg'
 const BussinessSummary = () => {
     return (
         <div className=''>
-            <div className='text-center mt-6 '>
-                <h1 className='text-3xl font-bold '>MILLOINS BUSSINESS TRUST US</h1>
+            <div className='text-center mt-24 mx-auto max-w-7xl'>
+                <h1 className='lg:text-3xl text-xl font-bold '>MILLOINS BUSSINESS TRUST US</h1>
                 <p className='text-xl font-semibold mt-4'>Try to Understand Users Expecttation</p>
             </div>
 
-            <div className='md:flex md:justify-evenly md:mt-8 ml-32'>
+            {/* <div className=' md:grid grid-cols-2 md:grid-cols-4 justify-items-center items-center gap-20 mt-14'>
                 <div>
                     <img className='w-[100px] mb-4' src={icon4} alt="" />
                     <div class="stat-value">60 +</div>
@@ -33,7 +33,26 @@ const BussinessSummary = () => {
                     <div class="stat-value">4,200 +</div>
                     <h1 className='text-2xl font-bold'>Feedbacks</h1>
                 </div>
-            </div>
+            </div> */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             <div className='md:w-3/4 justify-items-center mx-auto w-full hidden md:block shadow-xl bg-accent p-12 mt-12 '>
                 <div className='flex'>

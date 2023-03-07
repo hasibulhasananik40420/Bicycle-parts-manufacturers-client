@@ -10,7 +10,7 @@ import Products from './Products';
 const Home = () => {
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch('https://pure-island-40196.herokuapp.com/review')
+        fetch('http://localhost:5000/review')
             .then(res => res.json())
             .then(data => {
                 console.log(data);

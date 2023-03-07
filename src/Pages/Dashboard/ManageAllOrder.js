@@ -3,7 +3,7 @@ import Spinner from "../../Shared/Spinner";
 
 const ManageAllOrder = () => {
 
-  const { data: allOrders, isLoading, refetch } = useQuery('allOrders', () => fetch('https://pure-island-40196.herokuapp.com/orders').then(res => res.json()));
+  const { data: allOrders, isLoading, refetch } = useQuery('allOrders', () => fetch('http://localhost:5000/orders').then(res => res.json()));
 
   if (isLoading) {
     return <Spinner></Spinner>

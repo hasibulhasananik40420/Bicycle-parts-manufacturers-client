@@ -9,7 +9,7 @@ const MyOrders = () => {
 
   const [user] = useAuthState(auth)
   const email = user?.email
-  const { data: myOrders, isLoading, refetch } = useQuery('myOrders', () => fetch(`https://pure-island-40196.herokuapp.com/myorders?email=${email}`).then(res => res.json()));
+  const { data: myOrders, isLoading, refetch } = useQuery('myOrders', () => fetch(`http://localhost:5000/myorders?email=${email}`).then(res => res.json()));
 
   if (isLoading) {
     return <Spinner></Spinner>
@@ -17,7 +17,7 @@ const MyOrders = () => {
 
 
   const handleOrderDelete = id => {
-    fetch(`https://pure-island-40196.herokuapp.com/myorders/${id}`, {
+    fetch(`http://localhost:5000/myorders/${id}`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json',

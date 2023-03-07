@@ -22,7 +22,7 @@ const MyProfil = () => {
       city: e.target.city.value,
       phone: e.target.phone.value
     }
-    const url = `https://pure-island-40196.herokuapp.com/myprofil/${email}`
+    const url = `http://localhost:5000/myprofil/${email}`
     fetch(url, {
       method: 'PUT',
       headers: {
@@ -45,8 +45,8 @@ const MyProfil = () => {
       })
   }
 
-  //  const { data: profil, isLoading, refetch } = useQuery('profil', () => fetch(`https://pure-island-40196.herokuapp.com/myprofil/${user?.email}`).then(res => res.json()));
-  const { data: profil, isLoading, refetch } = useQuery('profil', () => fetch(`https://pure-island-40196.herokuapp.com/myprofil/${user?.email}`).then(res => res.json()));
+  //  const { data: profil, isLoading, refetch } = useQuery('profil', () => fetch(`http://localhost:5000/myprofil/${user?.email}`).then(res => res.json()));
+  const { data: profil, isLoading, refetch } = useQuery('profil', () => fetch(`http://localhost:5000/myprofil/${user?.email}`).then(res => res.json()));
 
 
   if (isLoading) {

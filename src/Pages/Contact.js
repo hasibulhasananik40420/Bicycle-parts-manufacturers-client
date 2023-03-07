@@ -4,7 +4,7 @@ import { RiMapPin5Line } from 'react-icons/ri';
 const Contact = () => {
     return (
 
-        <div className='mt-12 mx-8'>
+        <div className='mt-12 max-w-7xl mx-auto px-8'>
             <h1 className=' text-success font-lato'>How can help you ?</h1>
 
             <div className='lg:flex lg:justify-evenly w-full mt-10 gap-8'>
@@ -38,7 +38,7 @@ const Contact = () => {
 
             {/* office studio shop */}
 
-            <div className='mt-14 lg:flex w-full gap-24'>
+            <div className='max-w-7xl mx-auto mt-14 lg:flex justify-center w-full gap-24'>
                 <div className='mb-4'>
                     <h1 className='text-3xl font-lato font-medium text-success'>Office</h1>
                     <p className='font-lato mt-4'>205 North Michigan Avenue, Suite 810
@@ -82,7 +82,7 @@ const Contact = () => {
 
             {/* contact us */}
 
-            <div className='mt-16'>
+            <div className='mt-16 max-w-7xl mx-auto text-center'>
                 <h1 className='text-2xl font-semibold text-success'>Contact form
                 </h1>
                 <h1 className='lg:text-6xl text-4xl font-bold text-[#253D4E] mt-2'>Drop Us a Line</h1>
@@ -91,7 +91,7 @@ const Contact = () => {
                 </p>
 
 
-                <div className='lg:flex w-full gap-16'>
+                <div className='lg:flex justify-center  items-center w-full gap-16'>
                     <form >
                         <div className='p-2 lg:w-[700px] w-full mt-8'>
 
@@ -116,7 +116,7 @@ const Contact = () => {
                     </form>
 
                     <div>
-                        <img className='w-[350px] h-[350px]' src="http://wp.alithemes.com/html/nest/demo/assets/imgs/page/contact-2.png" alt="" />
+                        <img className='md:w-[350px] md:h-[350px] w-full h-full' src="http://wp.alithemes.com/html/nest/demo/assets/imgs/page/contact-2.png" alt="" />
                     </div>
                 </div>
 

@@ -31,7 +31,7 @@ const AddProduct = (e) => {
                         des: data.des,
                         img: img
                     }
-                    fetch('https://pure-island-40196.herokuapp.com/products', {
+                    fetch('http://localhost:5000/products', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

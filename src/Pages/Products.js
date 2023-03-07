@@ -9,7 +9,7 @@ const Products = () => {
     }
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('https://pure-island-40196.herokuapp.com/products')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -17,12 +17,12 @@ const Products = () => {
             })
     }, [])
     return (
-        <div className='mt-8'>
+        <div className='mt-8 max-w-7xl mx-auto'>
             <h1 className='text-3xl font-bold text-center'>Tools</h1>
             <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/wave.png" alt="" className='mx-auto' />
             <Link to='/allproducts' className='text-xl font-medium cursor-pointer flex justify-end text-red-600'>See more</Link>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:m-8'>
+            <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center'>
                 {
                     products?.slice(0, 6).map(product => <div key='product._id'>
 

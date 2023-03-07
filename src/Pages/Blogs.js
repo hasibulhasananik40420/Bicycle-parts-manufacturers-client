@@ -2,67 +2,86 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div className='mt-16'>
 
-            <div tabindex="0" className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box md:w-3/4 mx-auto mb-3">
-                <div className="collapse-title text-xl font-medium">
-                    How will you improve the performance of a React Application?
-                </div>
-                <div className="collapse-content">
-                    Lazy loading images in React.
-                    collapseclassMemoizing React components to prevent unnecessary re-renders.
-                    Keeping component state local where necessary
-                    Code-splitting in React using dynamic import()
-                    Windowing or list virtualization in React.
+        <section class="bg-white dark:bg-gray-900">
+            <div class="container px-6 py-10 mx-auto">
+                <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">From the blog</h1>
+
+                <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
+                    <div class="lg:flex">
+                        <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
+
+                        <div class="flex flex-col justify-between py-6 lg:mx-6">
+                            <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                                How to use sticky note for problem solving
+                            </a>
+
+                            <span class="text-sm text-gray-500 dark:text-gray-300">On: 20 October 2019</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:flex">
+                        <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
+
+                        <div class="flex flex-col justify-between py-6 lg:mx-6">
+                            <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                                How to use sticky note for problem solving
+                            </a>
+
+                            <span class="text-sm text-gray-500 dark:text-gray-300">On: 20 October 2019</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:flex">
+                        <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1544654803-b69140b285a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
+
+                        <div class="flex flex-col justify-between py-6 lg:mx-6">
+                            <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                                Morning routine to boost your mood
+                            </a>
+
+                            <span class="text-sm text-gray-500 dark:text-gray-300">On: 25 November 2020</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:flex">
+                        <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1530099486328-e021101a494a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1547&q=80" alt="" />
+
+                        <div class="flex flex-col justify-between py-6 lg:mx-6">
+                            <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                                All the features you want to know
+                            </a>
+
+                            <span class="text-sm text-gray-500 dark:text-gray-300">On: 30 September 2020</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:flex">
+                        <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1484&q=80" alt="" />
+
+                        <div class="flex flex-col justify-between py-6 lg:mx-6">
+                            <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                                Minimal workspace for your inspirations
+                            </a>
+
+                            <span class="text-sm text-gray-500 dark:text-gray-300">On: 13 October 2019</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:flex">
+                        <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1624996379697-f01d168b1a52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
+
+                        <div class="flex flex-col justify-between py-6 lg:mx-6">
+                            <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                                What do you want to know about Blockchane
+                            </a>
+
+                            <span class="text-sm text-gray-500 dark:text-gray-300">On: 20 October 2019</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
-            <div tabindex="0" className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box md:w-3/4 mx-auto mb-3">
-                <div className="collapse-title text-xl font-medium">
-                    What are the different ways to manage a state in a React application?
-                </div>
-                <div className="collapse-content">
-                    Every React component has a built-in state. This state is an object which stores the property values that belong to a component. State is able to keep data from different components in-sync because each state update re-renders all relevant components. There are four main types of state you need to properly manage in your React State
-                    <p> 1) Local state</p>
-                    <p> 2) Global state</p>
-                    <p> 3) Server state</p>
-                    <p>4) URL state</p>
-                </div>
-            </div>
-
-
-            <div tabindex="0" className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box md:w-3/4 mx-auto mb-3">
-                <div className="collapse-title text-xl font-medium">
-                    Why you do not set the state directly in React. For example, if you have const [products, setProducts] = useState([]). Why you do not set products = [...] instead, you use the setProducts
-                </div>
-                <div className="collapse-content">
-                    I should never set the state directly because of the following reasons:
-                    1) If I set it directly, calling the setState() afterward may just replace the set i made.
-                    2) When i directly set the state, it does not change this.state immediately. Instead, it creates a pending state transition, and accessing it after calling this method will only return the present value.
-                    3) I will lose control of the state across all components.
-                </div>
-            </div>
-
-            <div tabindex="0" className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box md:w-3/4 mx-auto mb-3">
-                <div className="collapse-title text-xl font-medium">
-                What is a unit test? Why should write unit tests?
-                </div>
-                <div className="collapse-content">
-                Unit tests only test a single part of your implementation. A unit. No dependencies or integrations, no framework specifics. They're like a method that returns a link in a specific language:
-                </div>
-            </div>
-
-
-            <div tabindex="0" className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box md:w-3/4 mx-auto mb-3">
-                <div className="collapse-title text-xl font-medium">
-                How does prototypical inheritance work?
-                </div>
-                <div className="collapse-content">
-                JavaScript is the most common of the prototype-capable languages, and its capabilities are relatively unique. When used appropriately, prototypical inheritance in JavaScript is a powerful tool that can save hours of coding.
-                </div>
-            </div>
-        </div>
+        </section>
     );
 };
 
