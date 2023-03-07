@@ -10,7 +10,7 @@ const AllProducts = () => {
         navigate(`/singleservice/${id}`)
     }
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://assignment-12-server-orpin.vercel.app/products')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);

@@ -22,7 +22,7 @@ const MyProfil = () => {
       city: e.target.city.value,
       phone: e.target.phone.value
     }
-    const url = `http://localhost:5000/myprofil/${email}`
+    const url = `https://assignment-12-server-orpin.vercel.app/myprofil/${email}`
     fetch(url, {
       method: 'PUT',
       headers: {
@@ -45,8 +45,8 @@ const MyProfil = () => {
       })
   }
 
-  //  const { data: profil, isLoading, refetch } = useQuery('profil', () => fetch(`http://localhost:5000/myprofil/${user?.email}`).then(res => res.json()));
-  const { data: profil, isLoading, refetch } = useQuery('profil', () => fetch(`http://localhost:5000/myprofil/${user?.email}`).then(res => res.json()));
+  //  const { data: profil, isLoading, refetch } = useQuery('profil', () => fetch(`https://assignment-12-server-orpin.vercel.app/myprofil/${user?.email}`).then(res => res.json()));
+  const { data: profil, isLoading, refetch } = useQuery('profil', () => fetch(`https://assignment-12-server-orpin.vercel.app/myprofil/${user?.email}`).then(res => res.json()));
 
 
   if (isLoading) {

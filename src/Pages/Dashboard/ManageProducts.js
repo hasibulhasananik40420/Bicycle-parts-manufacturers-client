@@ -6,7 +6,7 @@ import DeleteModal from './DeleteModal';
 const ManageProducts = () => {
 
     const [deleteProduct, setDeleteProduct] = useState(null)
-    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('http://localhost:5000/products', {
+    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('https://assignment-12-server-orpin.vercel.app/products', {
         headers: {
             'content-type': 'application/json'
             // authorization: `Bearer ${localStorage.getItem('accessToken')}`

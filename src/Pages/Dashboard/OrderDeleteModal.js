@@ -6,7 +6,7 @@
                   
 //        const handleOrderDelete = id =>{
 //            console.log(id);
-//            fetch(`http://localhost:5000/myorders/${id}`,{
+//            fetch(`https://assignment-12-server-orpin.vercel.app/myorders/${id}`,{
 //             method: 'DELETE' ,
 //             headers:{
 //                 'content-type': 'application/json',

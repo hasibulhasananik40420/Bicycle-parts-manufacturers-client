@@ -18,7 +18,7 @@ const AddReview = () => {
 
 
         }
-        const url = `http://localhost:5000/review`
+        const url = `https://assignment-12-server-orpin.vercel.app/review`
         fetch(url, {
             method: 'POST',
             headers: {
@@ -41,7 +41,7 @@ const AddReview = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://assignment-12-server-orpin.vercel.app/review')
             .then(res => res.json())
             .then(data => {
                 console.log(data);

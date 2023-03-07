@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import Spinner from '../../Shared/Spinner';
 import UserRow from './UserRow';
 const AllUsers = () => {
-  const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user').then(res => res.json()))
+  const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://assignment-12-server-orpin.vercel.app/user').then(res => res.json()))
 
   if (isLoading) {
     return <Spinner></Spinner>

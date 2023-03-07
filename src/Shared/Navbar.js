@@ -12,8 +12,8 @@ const Navbar = () => {
     localStorage.removeItem('accessToken')
   }
   return (
-    <div className="navbar bg-[#7F167F]">
-      <div className="navbar-start ">
+    <div className="navbar bg-[#4000ff]">
+      <div className="navbar-start max-w-7xl mx-auto px-20">
         <div className="dropdown">
           <label tabindex="0" className="btn btn-ghost lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -30,7 +30,7 @@ const Navbar = () => {
             {user ? <button onClick={handleSingOut} className='font-medium text-white'>SingOut</button> : <li><Link className='font-medium text-white' to='/login'>Login</Link></li>}
           </ul>
         </div>
-        <Link className="text-xl text-black  md:ml-3" to="/"><span className='text-red-600 font-serif font-semibold md:text-2xl'>I</span><span className='text-gray-700 font-serif font-semibold md:text-2xl'>zmo</span> <span className='text-red-600 font-serif font-semibold md:text-2xl'>S</span><span className='text-gray-700 font-serif font-semibold text-2xl'>tor</span> </Link>
+        <Link className="md:text-xl text-black  md:ml-3" to="/"><span className='text-red-600 font-serif font-semibold md:text-2xl'>I</span><span className='text-gray-700 font-serif font-semibold md:text-2xl'>zmo</span> <span className='text-red-600 font-serif font-semibold md:text-2xl'>S</span><span className='text-gray-700 font-serif font-semibold text-2xl'>tor</span> </Link>
       </div>
 
       <div className="navbar-center hidden lg:flex ">
